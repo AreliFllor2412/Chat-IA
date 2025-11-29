@@ -1,0 +1,17 @@
+[
+  {
+    "rol": "bot",
+    "mensaje": "\n<div class=\"bot-card\">\n  <div class=\"bot-header\">\n    <span class=\"bot-chip\">🤖 Asistente IA · PharmaControl</span>\n  </div>\n\n  <p class=\"title\">\n    ¡Hola! Soy la inteligencia artificial de <b>PharmaControl</b>.\n  </p>\n\n  <p class=\"subtitle\">Puedo ayudarte rápidamente con:</p>\n\n  <ol class=\"bot-list\">\n    <li><b>1)</b> Ver <b>reporte general</b> de medicamentos.</li>\n    <li><b>2)</b> Ver <b>medicamentos sin stock</b>.</li>\n    <li><b>3)</b> Ver <b>medicamentos con existencia</b>.</li>\n    <li><b>4)</b> Ver <b>proveedores</b>.</li>\n    <li><b>5)</b> Ver <b>usuarios</b>.</li>\n    <li><b>6)</b> Buscar un <b>medicamento por nombre</b>.</li>\n  </ol>\n\n  <p class=\"hint\">\n    👉 Puedes escribir por ejemplo:\n    <code>1</code>,\n    <code>reporte general</code>,\n    <code>sin stock</code>,\n    <code>existencias</code>,\n    <code>proveedores</code>,\n    <code>usuarios</code>,\n    <code>paracetamol</code>.\n  </p>\n</div>\n",
+    "fecha": "2025-11-29 14:58:12.656590"
+  },
+  {
+    "rol": "usuario",
+    "mensaje": "1",
+    "fecha": "2025-11-29 14:58:15.170718"
+  },
+  {
+    "rol": "bot",
+    "mensaje": "❌ <b>No se pudo conectar con la API.</b><br>Verifica que la URL en tu archivo <code>.env</code> sea correcta y que el servidor de la API esté funcionando.<br><small style='color:#888'>Detalle técnico: No se pudo resolver el host (DNS). HTTPSConnectionPool(host='api.pharmacontrol.site', port=443): Max retries exceeded with url: /medicamentos/all (Caused by NameResolutionError(\"<urllib3.connection.HTTPSConnection object at 0x000002742DBEAA50>: Failed to resolve 'api.pharmacontrol.site' ([Errno 11002] getaddrinfo failed)\"))</small>",
+    "fecha": "2025-11-29 14:58:19.625843"
+  }
+]

@@ -28,7 +28,7 @@ from services.openai_service import generar_descripcion_ia
 # =======================
 load_dotenv()
 
-API_BASE_URL = os.getenv("NEST_API_URL",)
+API_BASE_URL = os.getenv("API_BASE_URL", "http://localhost:3000/api")
 
 app = FastAPI(title="PharmaControl API", version="3.1")
 
@@ -454,11 +454,20 @@ async def chat(req: ChatRequest):
         resp_med = requests.get(f"{API_BASE_URL}/medicamentos/all")
         resp_med.raise_for_status()
         medicamentos = resp_med.json()
-    except Exception as e:
+    except requests.exceptions.ConnectionError as e:
         respuesta = (
-            "❌ No se pudo conectar con la API de medicamentos.<br>"
-            f"Detalle técnico: {str(e)}"
+            "❌ <b>No se pudo conectar con la API.</b><br>"
+            "Verifica que la URL en tu archivo <code>.env</code> sea correcta y que el servidor de la API esté funcionando.<br>"
+            f"<small style='color:#888'>Detalle técnico: No se pudo resolver el host (DNS). {e}</small>"
         )
+        sesiones[session_id].append(
+            {"rol": "bot", "mensaje": respuesta, "fecha": str(datetime.datetime.now())}
+        )
+        guardar_historial_json(session_id, sesiones[session_id])
+        return {"respuesta": respuesta}
+    except Exception as e:
+        detalle = str(e)
+        respuesta = f"❌ Ocurrió un error inesperado al conectar con la API.<br><small style='color:#888'>Detalle: {detalle}</small>"
         sesiones[session_id].append(
             {"rol": "bot", "mensaje": respuesta, "fecha": str(datetime.datetime.now())}
         )
