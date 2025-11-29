@@ -1,0 +1,340 @@
+/* ================================================
+   BASE GENERAL
+================================================ */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  height: 100vh;
+  background: #f0f2f5;
+  color: #333;
+}
+
+/* ================================================
+   SIDEBAR
+================================================ */
+.sidebar {
+  width: 270px;
+  background: #1e2a38;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem 1rem;
+  box-shadow: 2px 0 6px rgba(0,0,0,0.15);
+}
+
+.logo {
+  font-size: 2.2rem;
+  text-align: center;
+  margin-bottom: 0.3rem;
+}
+
+.sidebar h2 {
+  font-size: 1.3rem;
+  text-align: center;
+  margin: 0 0 1rem 0;
+}
+
+.btn-nuevo {
+  background: #007bff;
+  border: none;
+  color: #fff;
+  padding: 0.7rem;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+.btn-nuevo:hover {
+  background: #0056b3;
+}
+
+.sidebar h3 {
+  font-size: 1rem;
+  margin: 1rem 0 .8rem;
+  color: #ccc;
+}
+
+/* ================================================
+   HISTORIAL (TARJETAS)
+================================================ */
+.historial-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  overflow-y: auto;
+  flex: 1;
+}
+
+.historial-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.6rem 0.8rem;
+  background: #243447;
+  color: #fff;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  transition: transform 0.2s, background 0.3s;
+}
+
+.historial-card:hover {
+  background: #1e2a38;
+  transform: scale(1.02);
+}
+
+.historial-info {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.historial-actions {
+  display: flex;
+  gap: 0.4rem;
+}
+
+.btn-ver {
+  padding: 4px 8px;
+  background: #007bff;
+  color: #fff !important;
+  border-radius: 4px;
+  text-decoration: none;
+  font-size: 0.8rem;
+  transition: background 0.2s;
+}
+.btn-ver:hover {
+  background: #0056b3;
+}
+
+.btn-delete {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  color: #ff6666;
+  transition: transform 0.2s;
+}
+.btn-delete:hover {
+  transform: scale(1.2);
+  color: #ff4d4d;
+}
+
+/* ================================================
+   ÁREA PRINCIPAL
+================================================ */
+.main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  border-left: 1px solid #ddd;
+}
+
+.header {
+  background: #1e2a38;
+  color: #fff;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+/* ================================================
+   CHAT
+================================================ */
+.chat-box {
+  flex: 1;
+  padding: 1rem;
+  overflow-y: auto;
+  background: #f7f9fc;
+  display: flex;
+  flex-direction: column;
+}
+
+.message {
+  margin: .6rem 0;
+  padding: .8rem 1rem;
+  border-radius: 15px;
+  max-width: 70%;
+  line-height: 1.5;
+  word-wrap: break-word;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  font-size: 0.95rem;
+  animation: fadeIn 0.3s ease;
+}
+
+.user {
+  background: #007bff;
+  color: #fff;
+  margin-left: auto;
+  border-bottom-right-radius: 3px;
+}
+
+.bot {
+  background: #e9ecef;
+  color: #333;
+  margin-right: auto;
+  border-bottom-left-radius: 3px;
+}
+
+/* Botones PDF */
+.pdf-btn {
+  display: inline-block;
+  margin-top: .4rem;
+  padding: .4rem .8rem;
+  background: #28a745;
+  color: #fff;
+  font-size: 0.85rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background .2s, transform .2s;
+}
+.pdf-btn:hover {
+  background: #218838;
+  transform: scale(1.05);
+}
+
+/* ================================================
+   INPUT / ACCIONES
+================================================ */
+.actions {
+  display: flex;
+  padding: .8rem;
+  border-top: 1px solid #ddd;
+  background: #f4f6f9;
+}
+
+.actions input {
+  flex: 1;
+  padding: .8rem;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 1rem;
+}
+
+.actions button {
+  margin-left: .5rem;
+  padding: .8rem 1.2rem;
+  border: none;
+  border-radius: 10px;
+  background: #007bff;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.actions button:hover {
+  background: #0056b3;
+}
+
+/* ================================================
+   CARD DE LA IA
+================================================ */
+.bot-card {
+  width: 330px;
+  max-width: 90%;
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 16px 18px;
+  margin: 5px 0;
+  box-shadow: 0 10px 25px rgba(15,23,42,0.12);
+  animation: fadeIn .3s ease;
+}
+
+.bot-header {
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 8px;
+}
+
+.bot-chip {
+  font-size: 12px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #2563eb, #22c55e);
+  color: #ffffff;
+  font-weight: 600;
+  letter-spacing: .02em;
+}
+
+.bot-card .title {
+  font-size: 14px;
+  font-weight: 600;
+  margin: 6px 0;
+}
+
+.bot-card .subtitle {
+  font-size: 13px;
+  color: #64748b;
+  margin: 4px 0 8px;
+}
+
+.bot-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.bot-list li {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  padding: 3px 0;
+}
+
+.bot-card .hint {
+  font-size: 12px;
+  color: #6b7280;
+  margin-top: 10px;
+}
+
+.bot-card code {
+  background: #eef1f5;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 12px;
+}
+
+/* ================================================
+   ANIMACIONES
+================================================ */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(5px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ================================================
+   RESPONSIVE
+================================================ */
+@media (max-width: 768px) {
+  body {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .historial-list {
+    display: none;
+  }
+
+  .header {
+    font-size: 1rem;
+  }
+
+  .message {
+    max-width: 85%;
+  }
+}

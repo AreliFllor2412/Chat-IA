@@ -1,0 +1,17 @@
+[
+  {
+    "rol": "bot",
+    "mensaje": "👋 ¡Bienvenido a **PharmaControl**!<br>Puedo ayudarte con:<br>💊 *Consultar existencias de medicamentos*<br>⚠️ *Ver medicamentos sin stock*<br>📑 *Generar reportes en PDF*<br>📦 *Listar proveedores*<br>👤 *Listar usuarios registrados*<br><br>👉 Ejemplo: escribe `reporte general` o `proveedores`.",
+    "fecha": "2025-11-28 10:38:37.150244"
+  },
+  {
+    "rol": "usuario",
+    "mensaje": "hola",
+    "fecha": "2025-11-28 10:38:51.183975"
+  },
+  {
+    "rol": "bot",
+    "mensaje": "👋 ¡Hola! Soy tu asistente de **PharmaControl**.<br>Puedo ayudarte con:<br>💊 *Existencias de medicamentos*<br>⚠️ *Sin stock*<br>📑 *Reportes PDF*<br>📦 *Proveedores*<br>👤 *Usuarios*",
+    "fecha": "2025-11-28 10:38:51.466419"
+  }
+]

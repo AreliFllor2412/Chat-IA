@@ -1,0 +1,37 @@
+[
+  {
+    "rol": "bot",
+    "mensaje": "\n<div class=\"bot-card\">\n  <div class=\"bot-header\">\n    <span class=\"bot-chip\">🤖 Asistente IA · PharmaControl</span>\n  </div>\n\n  <p class=\"title\">\n    ¡Hola! Soy la inteligencia artificial de <b>PharmaControl</b>.\n  </p>\n\n  <p class=\"subtitle\">Puedo ayudarte con:</p>\n\n  <ul class=\"bot-list\">\n    <li>💊 <strong>Existencias de medicamentos</strong></li>\n    <li>⚠️ <strong>Alertas de medicamentos sin stock</strong></li>\n    <li>📑 <strong>Reportes en PDF</strong></li>\n    <li>📦 <strong>Listado de proveedores</strong></li>\n    <li>👤 <strong>Usuarios registrados</strong></li>\n  </ul>\n\n  <p class=\"hint\">\n    👉 Ejemplos:\n    <code>reporte general</code>,\n    <code>sin stock</code>,\n    <code>proveedores</code>,\n    <code>usuarios</code>.\n  </p>\n</div>\n",
+    "fecha": "2025-11-28 11:34:02.256475"
+  },
+  {
+    "rol": "usuario",
+    "mensaje": "reporte de  medicamentos",
+    "fecha": "2025-11-28 11:34:08.630636"
+  },
+  {
+    "rol": "bot",
+    "mensaje": "📑 <b>Reporte general generado exitosamente.</b><br>📦 Incluye todos los medicamentos registrados.<br><br><a href='static/reportes\\reporte_reporte_general_de_medicamentos_20251128_113408.pdf' target='_blank' class='pdf-btn'>📥 Descargar reporte</a>",
+    "fecha": "2025-11-28 11:34:08.665763"
+  },
+  {
+    "rol": "usuario",
+    "mensaje": "reporte de  provedores",
+    "fecha": "2025-11-28 11:34:18.893547"
+  },
+  {
+    "rol": "bot",
+    "mensaje": "📑 <b>Reporte general generado exitosamente.</b><br>📦 Incluye todos los medicamentos registrados.<br><br><a href='static/reportes\\reporte_reporte_general_de_medicamentos_20251128_113418.pdf' target='_blank' class='pdf-btn'>📥 Descargar reporte</a>",
+    "fecha": "2025-11-28 11:34:18.916969"
+  },
+  {
+    "rol": "usuario",
+    "mensaje": "usuarios   reporte",
+    "fecha": "2025-11-28 11:34:29.717340"
+  },
+  {
+    "rol": "bot",
+    "mensaje": "❌ Error inesperado: 404 Client Error: Not Found for url: http://localhost:3000/api/users/all",
+    "fecha": "2025-11-28 11:34:29.737404"
+  }
+]

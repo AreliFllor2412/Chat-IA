@@ -1,0 +1,47 @@
+[
+  {
+    "rol": "bot",
+    "mensaje": "\n<div class=\"bot-card\">\n  <div class=\"bot-header\">\n    <span class=\"bot-chip\">🤖 Asistente IA · PharmaControl</span>\n  </div>\n\n  <p class=\"title\">\n    ¡Hola! Soy la inteligencia artificial de <b>PharmaControl</b>.\n  </p>\n\n  <p class=\"subtitle\">Puedo ayudarte rápidamente con:</p>\n\n  <ol class=\"bot-list\">\n    <li><b>1)</b> Ver <b>reporte general</b> de medicamentos.</li>\n    <li><b>2)</b> Ver <b>medicamentos sin stock</b>.</li>\n    <li><b>3)</b> Ver <b>medicamentos con existencia</b>.</li>\n    <li><b>4)</b> Ver <b>proveedores</b>.</li>\n    <li><b>5)</b> Ver <b>usuarios</b>.</li>\n    <li><b>6)</b> Buscar un <b>medicamento por nombre</b>.</li>\n  </ol>\n\n  <p class=\"hint\">\n    👉 Puedes escribir por ejemplo:\n    <code>1</code>,\n    <code>reporte general</code>,\n    <code>sin stock</code>,\n    <code>existencias</code>,\n    <code>proveedores</code>,\n    <code>usuarios</code>,\n    <code>ibuprofeno</code>.\n  </p>\n</div>\n",
+    "fecha": "2025-11-28 13:13:22.872661"
+  },
+  {
+    "rol": "usuario",
+    "mensaje": "5",
+    "fecha": "2025-11-28 13:13:26.247309"
+  },
+  {
+    "rol": "bot",
+    "mensaje": "\n                <div class=\"bot-card\">\n                  <p class=\"title\">👤 <b>No pude obtener la lista de usuarios.</b></p>\n                  <p class=\"subtitle\">\n                    El módulo de <b>usuarios</b> en la API devolvió un\n                    <b>error interno</b>.\n                  </p>\n                  <p>\n                    🔧 Revisa el endpoint\n                    <code>/api/users/all</code> en la API de PharmaControl\n                    (entidad <code>Usuario</code> y su tabla en MySQL).\n                  </p>\n                  <p class=\"hint\">\n                    Mientras tanto, puedes seguir consultando\n                    <b>medicamentos</b>, <b>proveedores</b> o generar\n                    <b>reportes en PDF</b>.\n                  </p>\n                  <p><small style=\"color:#888\">Detalle técnico: 500 Server Error: Internal Server Error for url: http://localhost:3000/api/users/all</small></p>\n                </div>\n                ",
+    "fecha": "2025-11-28 13:13:30.397000"
+  },
+  {
+    "rol": "usuario",
+    "mensaje": "2",
+    "fecha": "2025-11-28 13:15:42.562972"
+  },
+  {
+    "rol": "bot",
+    "mensaje": "\n                <p>⚠️ <b>Medicamentos SIN existencia</b></p>\n                <p>📄 Se encontraron <b>44</b> productos agotados.</p>\n\n                <table class=\"tabla-datos\">\n                  <thead>\n                    <tr>\n                      <th>ID</th>\n                      <th>Nombre</th>\n                      <th>Existencias</th>\n                      <th>Lote</th>\n                    </tr>\n                  </thead>\n                  <tbody>\n                    \n                    <tr>\n                      <td>1</td>\n                      <td>GENOPRAZOL 20 MG CAP</td>\n                      <td>0</td>\n                      <td>650240036415</td>\n                    </tr>\n                    \n                    <tr>\n                      <td>2</td>\n                      <td>TABCIN NOCHE 12 CAPS</td>\n                      <td>0</td>\n                      <td>7501008499702</td>\n                    </tr>\n                    \n                    <tr>\n                      <td>3</td>\n                      <td>THERAFLU RESFRIADO SEVERO 10 SOBRES</td>\n                      <td>0</td>\n                      <td>7501065000835</td>\n                    </tr>\n                    \n                    <tr>\n                      <td>4</td>\n                      <td>MELOX PLUS SUSP CEREZA 360 ML</td>\n                      <td>0</td>\n                      <td>7501072310392</td>\n                    </tr>\n                    \n                    <tr>\n                      <td>5</td>\n                      <td>JERINGA 5ML VERDE</td>\n                      <td>0</td>\n                      <td>7501073025493</td>\n                    </tr>\n                    \n                    <tr>\n                      <td>6</td>\n                      <td>JERINGA 5 ML NEGRA PLASTIPAK</td>\n                      <td>0</td>\n                      <td>7501073025523</td>\n                    </tr>\n                    \n                    <tr>\n                      <td>7</td>\n                      <td>ATROXOLAM JBE 150 ML</td>\n                      <td>0</td>\n                      <td>7501075723830</td>\n                    </tr>\n                    \n                    <tr>\n                      <td>8</td>\n                      <td>EUFENIL 400 10 CAP</td>\n                      <td>0</td>\n                      <td>7501130713516</td>\n                    </tr>\n                    \n                    <tr>\n                      <td>9</td>\n                      <td>EUCALIPTINE AMP PZA</td>\n                      <td>0</td>\n                      <td>7501159526029</td>\n                    </tr>\n                    \n                    <tr>\n                      <td>10</td>\n                      <td>PENIPOT 800 000 UI AMP</td>\n                      <td>0</td>\n                      <td>7501349011175</td>\n                    </tr>\n                    \n                  </tbody>\n                </table>\n\n                <p>\n                  <a href=\"static/reportes\\reporte_medicamentos_sin_existencia_20251128_131544.pdf\" target=\"_blank\" class=\"pdf-btn\">\n                    📥 Descargar reporte en PDF\n                  </a>\n                </p>\n                ",
+    "fecha": "2025-11-28 13:15:44.621626"
+  },
+  {
+    "rol": "usuario",
+    "mensaje": "oye me duele mi estomago  que puedo tomar",
+    "fecha": "2025-11-28 13:17:33.777812"
+  },
+  {
+    "rol": "bot",
+    "mensaje": "\n                <div class=\"bot-card\">\n                  <p class=\"title\">💊 <b>Oye me duele mi estomago  que puedo tomar</b></p>\n\n                  <p class=\"subtitle\">\n                    No encontré este medicamento en el <b>inventario registrado</b>,\n                    pero te comparto una descripción general:\n                  </p>\n\n                  <div class=\"ia-block\">\n                    🧾 <b>Descripción generada por IA:</b><br>\n                    El medicamento adecuado para aliviar el dolor de estómago puede variar dependiendo de la causa del malestar. En casos de acidez estomacal, indigestión o gastritis, los antiácidos como la hidróxido de aluminio o el hidróxido de magnesio suelen ser una opción común. Estos medicamentos ayudan a neutralizar el exceso de ácido en el estómago y aliviar la sensación de ardor y malestar.<br><br>Es importante seguir las indicaciones del fabricante o las recomendaciones de un profesional de la salud al usar estos medicamentos. Generalmente se toman después de las comidas o cuando se experimenta malestar, según la dosis recomendada en el envase. Si el dolor persiste o se agrava, es importante buscar atención médica para recibir un diagnóstico preciso y un tratamiento adecuado.\n                  </div>\n\n                  <p class=\"hint\">\n                    ✏️ Si quieres que aparezca en futuros reportes,\n                    regístralo en el módulo de <b>Medicamentos</b>\n                    dentro de PharmaControl.\n                  </p>\n                </div>\n                ",
+    "fecha": "2025-11-28 13:17:38.883756"
+  },
+  {
+    "rol": "usuario",
+    "mensaje": "gastritis",
+    "fecha": "2025-11-28 13:17:54.620770"
+  },
+  {
+    "rol": "bot",
+    "mensaje": "\n                <div class=\"bot-card\">\n                  <p class=\"title\">💊 <b>Gastritis</b></p>\n\n                  <p class=\"subtitle\">\n                    No encontré este medicamento en el <b>inventario registrado</b>,\n                    pero te comparto una descripción general:\n                  </p>\n\n                  <div class=\"ia-block\">\n                    🧾 <b>Descripción generada por IA:</b><br>\n                    La gastritis es una inflamación del revestimiento del estómago que puede ser causada por diversas razones, como infecciones, irritantes, estrés, o uso excesivo de ciertos medicamentos. El tratamiento para la gastritis generalmente incluye antiácidos, protectores gástricos, y en algunos casos antibióticos si hay una infección bacteriana presente. Es importante evitar alimentos irritantes y mantener una dieta equilibrada. Se recomienda consultar a un médico para recibir un diagnóstico adecuado y un tratamiento personalizado.\n                  </div>\n\n                  <p class=\"hint\">\n                    ✏️ Si quieres que aparezca en futuros reportes,\n                    regístralo en el módulo de <b>Medicamentos</b>\n                    dentro de PharmaControl.\n                  </p>\n                </div>\n                ",
+    "fecha": "2025-11-28 13:17:58.440054"
+  }
+]

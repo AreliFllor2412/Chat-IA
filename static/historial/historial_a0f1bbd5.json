@@ -1,0 +1,47 @@
+[
+  {
+    "rol": "bot",
+    "mensaje": "👋 ¡Bienvenido a **PharmaControl**!<br>Puedo ayudarte con:<br>💊 *Consultar existencias de medicamentos*<br>⚠️ *Ver medicamentos sin stock*<br>📑 *Generar reportes en PDF*<br>📦 *Listar proveedores*<br>👤 *Listar usuarios registrados*<br><br>👉 Ejemplo: escribe `reporte general` o `proveedores`.",
+    "fecha": "2025-10-16 22:59:02.818056"
+  },
+  {
+    "rol": "usuario",
+    "mensaje": "reporte  de usuarios",
+    "fecha": "2025-10-16 22:59:15.381781"
+  },
+  {
+    "rol": "bot",
+    "mensaje": "👤 **Reporte de Usuarios generado correctamente.**<br>Se encontraron **3 usuarios registrados.**<br><br><a href='static/reportes\\reporte_reporte_de_usuarios_20251016_225915.pdf' target='_blank' class='pdf-btn'>📥 Descargar Reporte</a>",
+    "fecha": "2025-10-16 22:59:15.593958"
+  },
+  {
+    "rol": "usuario",
+    "mensaje": "reporte dec  medicamentos",
+    "fecha": "2025-10-16 22:59:25.216107"
+  },
+  {
+    "rol": "bot",
+    "mensaje": "📑 **Reporte general generado exitosamente.**<br>📦 Incluye todos los medicamentos registrados.<br><br><a href='static/reportes\\reporte_reporte_general_de_medicamentos_20251016_225925.pdf' target='_blank' class='pdf-btn'>📥 Descargar Reporte</a>",
+    "fecha": "2025-10-16 22:59:25.240047"
+  },
+  {
+    "rol": "usuario",
+    "mensaje": "reporte general",
+    "fecha": "2025-10-16 22:59:57.467650"
+  },
+  {
+    "rol": "bot",
+    "mensaje": "📑 **Reporte general generado exitosamente.**<br>📦 Incluye todos los medicamentos registrados.<br><br><a href='static/reportes\\reporte_reporte_general_de_medicamentos_20251016_225957.pdf' target='_blank' class='pdf-btn'>📥 Descargar Reporte</a>",
+    "fecha": "2025-10-16 22:59:57.496049"
+  },
+  {
+    "rol": "usuario",
+    "mensaje": "que es ibuprofeno ?",
+    "fecha": "2025-10-16 23:00:17.883936"
+  },
+  {
+    "rol": "bot",
+    "mensaje": "🤖 No entendí tu solicitud.<br>Puedes pedirme:<br>💊 `existencias`<br>⚠️ `sin existencia`<br>📑 `reporte general`<br>📦 `proveedores`<br>👤 `usuarios`",
+    "fecha": "2025-10-16 23:00:17.903984"
+  }
+]

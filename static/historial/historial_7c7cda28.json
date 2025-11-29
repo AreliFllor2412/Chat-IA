@@ -1,0 +1,47 @@
+[
+  {
+    "rol": "bot",
+    "mensaje": "👋 ¡Bienvenido a **PharmaControl**!<br>Puedo ayudarte con:<br>💊 *Consultar existencias de medicamentos*<br>⚠️ *Ver medicamentos sin stock*<br>📑 *Generar reportes en PDF*<br>📦 *Listar proveedores*<br>👤 *Listar usuarios registrados*<br><br>👉 Ejemplo: escribe `reporte general` o `proveedores`.",
+    "fecha": "2025-10-17 00:06:00.194472"
+  },
+  {
+    "rol": "usuario",
+    "mensaje": "que es ibuprofeno ?",
+    "fecha": "2025-10-17 00:06:05.115159"
+  },
+  {
+    "rol": "bot",
+    "mensaje": "💊 **Que es ibuprofeno ?**<br>📂 No se encontró en la base local, pero aquí tienes información general:<br><br>🧾 **Descripción generada por IA:**<br>El ibuprofeno es un medicamento antiinflamatorio no esteroideo (AINE) que se utiliza comúnmente para aliviar el dolor, la fiebre y la inflamación. Se usa para tratar una variedad de condiciones, como dolores de cabeza, dolor muscular, artritis, fiebre y cólicos menstruales. Se puede tomar por vía oral en forma de tabletas, cápsulas o jarabe, y se recomienda seguir las indicaciones del médico o las instrucciones de la etiqueta del medicamento para una dosificación adecuada. Es importante no exceder la dosis recomendada y consultar a un profesional de la salud si se presentan efectos secundarios o si los síntomas no mejoran.",
+    "fecha": "2025-10-17 00:06:10.119054"
+  },
+  {
+    "rol": "usuario",
+    "mensaje": "reporte de usuarios",
+    "fecha": "2025-10-17 00:06:31.864119"
+  },
+  {
+    "rol": "bot",
+    "mensaje": "👤 **Reporte de Usuarios generado correctamente.**<br>Se encontraron **3 usuarios registrados.**<br><br><a href='static/reportes\\reporte_reporte_de_usuarios_20251017_000631.pdf' target='_blank' class='pdf-btn'>📥 Descargar Reporte</a>",
+    "fecha": "2025-10-17 00:06:31.895124"
+  },
+  {
+    "rol": "usuario",
+    "mensaje": "medicamentos",
+    "fecha": "2025-10-17 00:06:37.492516"
+  },
+  {
+    "rol": "bot",
+    "mensaje": "💊 **Medicamentos**<br>📂 No se encontró en la base local, pero aquí tienes información general:<br><br>🧾 **Descripción generada por IA:**<br>Lamento informarte que \"medicamentos\" es un término muy genérico y no corresponde a un medicamento específico. Si tienes algún otro medicamento en mente del cual desees información, por favor proporciona el nombre específico para poder brindarte detalles sobre su uso, indicaciones y posología. Estoy aquí para ayudarte con cualquier otra consulta que tengas.",
+    "fecha": "2025-10-17 00:06:39.266570"
+  },
+  {
+    "rol": "usuario",
+    "mensaje": "reporte de   medicamentos",
+    "fecha": "2025-10-17 00:06:53.521083"
+  },
+  {
+    "rol": "bot",
+    "mensaje": "📑 **Reporte general generado exitosamente.**<br>📦 Incluye todos los medicamentos registrados.<br><br><a href='static/reportes\\reporte_reporte_general_de_medicamentos_20251017_000653.pdf' target='_blank' class='pdf-btn'>📥 Descargar Reporte</a>",
+    "fecha": "2025-10-17 00:06:53.547216"
+  }
+]

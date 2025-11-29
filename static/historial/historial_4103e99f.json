@@ -1,0 +1,27 @@
+[
+  {
+    "rol": "bot",
+    "mensaje": "👋 ¡Bienvenido a **PharmaControl**!\n\nPuedo ayudarte con:\n💊 *Existencias de medicamentos*\n⚠️ *Medicamentos sin stock*\n📑 *Reportes en PDF*\n📦 *Proveedores registrados*\n👤 *Usuarios del sistema*\n\n👉 Ejemplo: escribe `existencias` o `reporte general`.",
+    "fecha": "2025-10-08 16:49:45.835738"
+  },
+  {
+    "rol": "usuario",
+    "mensaje": "am",
+    "fecha": "2025-10-08 16:49:48.063467"
+  },
+  {
+    "rol": "bot",
+    "mensaje": "🤖 No entendí tu petición.\n\n👉 Puedes pedirme:\n• `existencias`\n• `sin existencia`\n• `reporte general`\n• `proveedores`\n• `usuarios`",
+    "fecha": "2025-10-08 16:49:48.070251"
+  },
+  {
+    "rol": "usuario",
+    "mensaje": "existencias",
+    "fecha": "2025-10-08 16:49:53.985033"
+  },
+  {
+    "rol": "bot",
+    "mensaje": "✅ Se encontraron **0 medicamentos en existencia**.\n\n📥 [Descargar Reporte PDF](static/reportes\\reporte_medicamentos_en_existencia_20251008_164954.pdf)",
+    "fecha": "2025-10-08 16:49:54.004418"
+  }
+]

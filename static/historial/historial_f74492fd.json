@@ -1,0 +1,27 @@
+[
+  {
+    "rol": "bot",
+    "mensaje": "👋 ¡Bienvenido a **PharmaControl**!\n\nPuedo ayudarte con:\n💊 *Existencias de medicamentos*\n⚠️ *Medicamentos sin stock*\n📑 *Reportes en PDF*\n📦 *Proveedores registrados*\n👤 *Usuarios del sistema*\n\n👉 Ejemplo: escribe `existencias` o `reporte general`.",
+    "fecha": "2025-10-16 22:26:02.387932"
+  },
+  {
+    "rol": "usuario",
+    "mensaje": "reporte de medicamentos",
+    "fecha": "2025-10-16 22:26:14.319255"
+  },
+  {
+    "rol": "bot",
+    "mensaje": "📑 Reporte general generado correctamente.\n\n📥 [Descargar PDF](static/reportes\\reporte_reporte_general_de_medicamentos_20251016_222614.pdf)",
+    "fecha": "2025-10-16 22:26:14.358900"
+  },
+  {
+    "rol": "usuario",
+    "mensaje": "reporte de usuarios",
+    "fecha": "2025-10-16 22:26:25.234510"
+  },
+  {
+    "rol": "bot",
+    "mensaje": "👤 Hay **3 usuarios registrados**:\n• juan (juan@example.com)\n• ivone (maria.lopez@example.com)\n• user (user@example.com)\n\n📥 [Descargar Reporte PDF](static/reportes\\reporte_reporte_de_usuarios_20251016_222625.pdf)",
+    "fecha": "2025-10-16 22:26:25.279111"
+  }
+]

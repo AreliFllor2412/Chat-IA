@@ -1,0 +1,47 @@
+[
+  {
+    "rol": "bot",
+    "mensaje": "👋 ¡Bienvenido a **PharmaControl**!\n\nPuedo ayudarte con:\n💊 *Existencias de medicamentos*\n⚠️ *Medicamentos sin stock*\n📑 *Reportes en PDF*\n📦 *Proveedores registrados*\n👤 *Usuarios del sistema*\n\n👉 Ejemplo: escribe `existencias` o `reporte general`.",
+    "fecha": "2025-10-16 22:11:06.647775"
+  },
+  {
+    "rol": "usuario",
+    "mensaje": "hola",
+    "fecha": "2025-10-16 22:11:10.294590"
+  },
+  {
+    "rol": "bot",
+    "mensaje": "👋 ¡Hola! Soy tu asistente de **PharmaControl**.\n\nPuedes pedirme:\n• 💊 `existencias`\n• ⚠️ `sin existencia`\n• 📑 `reporte general`\n• 📦 `proveedores`\n• 👤 `usuarios`",
+    "fecha": "2025-10-16 22:11:10.722253"
+  },
+  {
+    "rol": "usuario",
+    "mensaje": "reporte",
+    "fecha": "2025-10-16 22:11:14.096629"
+  },
+  {
+    "rol": "bot",
+    "mensaje": "📑 Reporte general generado correctamente.\n\n📥 [Descargar PDF](static/reportes\\reporte_reporte_general_de_medicamentos_20251016_221114.pdf)",
+    "fecha": "2025-10-16 22:11:14.159306"
+  },
+  {
+    "rol": "usuario",
+    "mensaje": "provedores",
+    "fecha": "2025-10-16 22:11:27.841355"
+  },
+  {
+    "rol": "bot",
+    "mensaje": "🤖 No entendí tu petición.\n\n👉 Puedes pedirme:\n• `existencias`\n• `sin existencia`\n• `reporte general`\n• `proveedores`\n• `usuarios`",
+    "fecha": "2025-10-16 22:11:27.862633"
+  },
+  {
+    "rol": "usuario",
+    "mensaje": "reporte  proveedores",
+    "fecha": "2025-10-16 22:11:39.831317"
+  },
+  {
+    "rol": "bot",
+    "mensaje": "📦 Hay **20 proveedores registrados**:\n• Farmacias del Ahorro\n• Farmacias Guadalajara\n• Farmacias Similares\n• Grupo Fármacos Especializados\n• Sanofi México\n... y 15 más.\n\n📥 [Descargar Reporte PDF](static/reportes\\reporte_reporte_de_proveedores_20251016_221139.pdf)",
+    "fecha": "2025-10-16 22:11:39.877336"
+  }
+]

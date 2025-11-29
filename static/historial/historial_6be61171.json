@@ -1,0 +1,17 @@
+[
+  {
+    "rol": "bot",
+    "mensaje": "👋 ¡Bienvenido a **PharmaControl**!\n\nPuedo ayudarte con:\n💊 *Existencias de medicamentos*\n⚠️ *Medicamentos sin stock*\n📑 *Reportes en PDF*\n📦 *Proveedores registrados*\n👤 *Usuarios del sistema*\n\n👉 Ejemplo: escribe `existencias` o `reporte general`.",
+    "fecha": "2025-10-08 16:50:24.005166"
+  },
+  {
+    "rol": "usuario",
+    "mensaje": "existencias",
+    "fecha": "2025-10-08 16:50:29.730064"
+  },
+  {
+    "rol": "bot",
+    "mensaje": "✅ Se encontraron **0 medicamentos en existencia**.\n\n📥 [Descargar Reporte PDF](static/reportes\\reporte_medicamentos_en_existencia_20251008_165029.pdf)",
+    "fecha": "2025-10-08 16:50:29.747541"
+  }
+]

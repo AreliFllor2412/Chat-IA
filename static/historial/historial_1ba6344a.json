@@ -1,0 +1,37 @@
+[
+  {
+    "rol": "bot",
+    "mensaje": "\n<div class=\"bot-card\">\n  <div class=\"bot-header\">\n    <span class=\"bot-chip\">🤖 Asistente IA · PharmaControl</span>\n  </div>\n\n  <p class=\"title\">\n    ¡Hola! Soy la inteligencia artificial de <b>PharmaControl</b>.\n  </p>\n\n  <p class=\"subtitle\">Puedo ayudarte con:</p>\n\n  <ul class=\"bot-list\">\n    <li>💊 <strong>Existencias de medicamentos</strong></li>\n    <li>⚠️ <strong>Alertas de medicamentos sin stock</strong></li>\n    <li>📑 <strong>Reportes en PDF</strong></li>\n    <li>📦 <strong>Listado de proveedores</strong></li>\n    <li>👤 <strong>Usuarios registrados</strong></li>\n  </ul>\n\n  <p class=\"hint\">\n    👉 Ejemplos:\n    <code>reporte general</code>,\n    <code>sin stock</code>,\n    <code>proveedores</code>,\n    <code>usuarios</code>.\n  </p>\n</div>\n",
+    "fecha": "2025-11-28 11:12:48.334105"
+  },
+  {
+    "rol": "usuario",
+    "mensaje": "exsitencia de medicmantos",
+    "fecha": "2025-11-28 11:14:25.570273"
+  },
+  {
+    "rol": "bot",
+    "mensaje": "💊 <b>Exsitencia de medicmantos</b><br>📂 No se encontró en la base local, pero aquí tienes información general:<br><br>🧾 <b>Descripción generada por IA:</b><br>Lamento informarte que \"exsitencia de medicmantos\" no es un medicamento conocido en farmacología. Si tienes alguna otra pregunta o necesitas información sobre un medicamento real, estaré encantado de ayudarte.",
+    "fecha": "2025-11-28 11:14:28.679725"
+  },
+  {
+    "rol": "usuario",
+    "mensaje": "quiero el stock de  medicamnetos",
+    "fecha": "2025-11-28 11:14:44.950443"
+  },
+  {
+    "rol": "bot",
+    "mensaje": "💊 <b>Quiero el stock de  medicamnetos</b><br>📂 No se encontró en la base local, pero aquí tienes información general:<br><br>🧾 <b>Descripción generada por IA:</b><br>Lamento informarte que no puedo proporcionar información sobre un medicamento específico llamado \"quiero el stock de medicamentos\" ya que no existe en mi base de datos. Si tienes alguna otra pregunta sobre medicamentos o farmacología, estaré encantado de ayudarte. ¡Gracias!",
+    "fecha": "2025-11-28 11:14:47.201962"
+  },
+  {
+    "rol": "usuario",
+    "mensaje": "reporte de medicamentso",
+    "fecha": "2025-11-28 11:14:56.444388"
+  },
+  {
+    "rol": "bot",
+    "mensaje": "📑 <b>Reporte general generado exitosamente.</b><br>📦 Incluye todos los medicamentos registrados.<br><br><a href='static/reportes\\reporte_reporte_general_de_medicamentos_20251128_111456.pdf' target='_blank' class='pdf-btn'>📥 Descargar reporte</a>",
+    "fecha": "2025-11-28 11:14:56.486910"
+  }
+]

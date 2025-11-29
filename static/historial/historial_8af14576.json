@@ -1,0 +1,97 @@
+[
+  {
+    "rol": "bot",
+    "mensaje": "\n<div class=\"bot-card\">\n  <div class=\"bot-header\">\n    <span class=\"bot-chip\">🤖 Asistente IA · PharmaControl</span>\n  </div>\n\n  <p class=\"title\">\n    ¡Hola! Soy la inteligencia artificial de <b>PharmaControl</b>.\n  </p>\n\n  <p class=\"subtitle\">Puedo ayudarte rápidamente con:</p>\n\n  <ol class=\"bot-list\">\n    <li><b>1)</b> Ver <b>reporte general</b> de medicamentos.</li>\n    <li><b>2)</b> Ver <b>medicamentos sin stock</b>.</li>\n    <li><b>3)</b> Ver <b>medicamentos con existencia</b>.</li>\n    <li><b>4)</b> Ver <b>proveedores</b>.</li>\n    <li><b>5)</b> Ver <b>usuarios</b>.</li>\n    <li><b>6)</b> Buscar un <b>medicamento por nombre</b>.</li>\n  </ol>\n\n  <p class=\"hint\">\n    👉 Puedes escribir por ejemplo:\n    <code>1</code>,\n    <code>reporte general</code>,\n    <code>sin stock</code>,\n    <code>existencias</code>,\n    <code>proveedores</code>,\n    <code>usuarios</code>,\n    <code>paracetamol</code>.\n  </p>\n</div>\n",
+    "fecha": "2025-11-28 13:06:34.473142"
+  },
+  {
+    "rol": "usuario",
+    "mensaje": "hola",
+    "fecha": "2025-11-28 13:06:37.675529"
+  },
+  {
+    "rol": "bot",
+    "mensaje": "\n<div class=\"bot-card\">\n  <div class=\"bot-header\">\n    <span class=\"bot-chip\">🤖 Asistente IA · PharmaControl</span>\n  </div>\n\n  <p class=\"title\">\n    ¡Hola! Soy la inteligencia artificial de <b>PharmaControl</b>.\n  </p>\n\n  <p class=\"subtitle\">Puedo ayudarte rápidamente con:</p>\n\n  <ol class=\"bot-list\">\n    <li><b>1)</b> Ver <b>reporte general</b> de medicamentos.</li>\n    <li><b>2)</b> Ver <b>medicamentos sin stock</b>.</li>\n    <li><b>3)</b> Ver <b>medicamentos con existencia</b>.</li>\n    <li><b>4)</b> Ver <b>proveedores</b>.</li>\n    <li><b>5)</b> Ver <b>usuarios</b>.</li>\n    <li><b>6)</b> Buscar un <b>medicamento por nombre</b>.</li>\n  </ol>\n\n  <p class=\"hint\">\n    👉 Puedes escribir por ejemplo:\n    <code>1</code>,\n    <code>reporte general</code>,\n    <code>sin stock</code>,\n    <code>existencias</code>,\n    <code>proveedores</code>,\n    <code>usuarios</code>,\n    <code>paracetamol</code>.\n  </p>\n</div>\n",
+    "fecha": "2025-11-28 13:06:39.762066"
+  },
+  {
+    "rol": "usuario",
+    "mensaje": "1",
+    "fecha": "2025-11-28 13:06:46.438004"
+  },
+  {
+    "rol": "bot",
+    "mensaje": "\n            <p>📑 <b>Reporte general generado exitosamente.</b></p>\n            <p>📦 Incluye <b>44</b> medicamentos registrados.</p>\n            <p>\n              <a href=\"static/reportes\\reporte_reporte_general_de_medicamentos_20251128_130648.pdf\" target=\"_blank\" class=\"pdf-btn\">\n                📥 Descargar reporte en PDF\n              </a>\n            </p>\n            ",
+    "fecha": "2025-11-28 13:06:48.521172"
+  },
+  {
+    "rol": "usuario",
+    "mensaje": "2",
+    "fecha": "2025-11-28 13:06:51.403888"
+  },
+  {
+    "rol": "bot",
+    "mensaje": "\n                <p>⚠️ <b>Medicamentos SIN existencia</b></p>\n                <p>📄 Se encontraron <b>44</b> productos agotados.</p>\n\n                <table class=\"tabla-datos\">\n                  <thead>\n                    <tr>\n                      <th>ID</th>\n                      <th>Nombre</th>\n                      <th>Existencias</th>\n                      <th>Lote</th>\n                    </tr>\n                  </thead>\n                  <tbody>\n                    \n                    <tr>\n                      <td>1</td>\n                      <td>GENOPRAZOL 20 MG CAP</td>\n                      <td>0</td>\n                      <td>650240036415</td>\n                    </tr>\n                    \n                    <tr>\n                      <td>2</td>\n                      <td>TABCIN NOCHE 12 CAPS</td>\n                      <td>0</td>\n                      <td>7501008499702</td>\n                    </tr>\n                    \n                    <tr>\n                      <td>3</td>\n                      <td>THERAFLU RESFRIADO SEVERO 10 SOBRES</td>\n                      <td>0</td>\n                      <td>7501065000835</td>\n                    </tr>\n                    \n                    <tr>\n                      <td>4</td>\n                      <td>MELOX PLUS SUSP CEREZA 360 ML</td>\n                      <td>0</td>\n                      <td>7501072310392</td>\n                    </tr>\n                    \n                    <tr>\n                      <td>5</td>\n                      <td>JERINGA 5ML VERDE</td>\n                      <td>0</td>\n                      <td>7501073025493</td>\n                    </tr>\n                    \n                    <tr>\n                      <td>6</td>\n                      <td>JERINGA 5 ML NEGRA PLASTIPAK</td>\n                      <td>0</td>\n                      <td>7501073025523</td>\n                    </tr>\n                    \n                    <tr>\n                      <td>7</td>\n                      <td>ATROXOLAM JBE 150 ML</td>\n                      <td>0</td>\n                      <td>7501075723830</td>\n                    </tr>\n                    \n                    <tr>\n                      <td>8</td>\n                      <td>EUFENIL 400 10 CAP</td>\n                      <td>0</td>\n                      <td>7501130713516</td>\n                    </tr>\n                    \n                    <tr>\n                      <td>9</td>\n                      <td>EUCALIPTINE AMP PZA</td>\n                      <td>0</td>\n                      <td>7501159526029</td>\n                    </tr>\n                    \n                    <tr>\n                      <td>10</td>\n                      <td>PENIPOT 800 000 UI AMP</td>\n                      <td>0</td>\n                      <td>7501349011175</td>\n                    </tr>\n                    \n                  </tbody>\n                </table>\n\n                <p>\n                  <a href=\"static/reportes\\reporte_medicamentos_sin_existencia_20251128_130653.pdf\" target=\"_blank\" class=\"pdf-btn\">\n                    📥 Descargar reporte en PDF\n                  </a>\n                </p>\n                ",
+    "fecha": "2025-11-28 13:06:53.482755"
+  },
+  {
+    "rol": "usuario",
+    "mensaje": "3",
+    "fecha": "2025-11-28 13:06:55.531658"
+  },
+  {
+    "rol": "bot",
+    "mensaje": "\n            <p>💊 <b>Medicamentos con existencia</b></p>\n            <p>📦 Se encontraron <b>0</b> medicamentos con stock disponible.</p>\n\n            <table class=\"tabla-datos\">\n              <thead>\n                <tr>\n                  <th>ID</th>\n                  <th>Nombre</th>\n                  <th>Existencias</th>\n                  <th>Lote</th>\n                </tr>\n              </thead>\n              <tbody>\n                \n              </tbody>\n            </table>\n\n            <p>\n              <a href=\"static/reportes\\reporte_medicamentos_en_existencia_20251128_130657.pdf\" target=\"_blank\" class=\"pdf-btn\">\n                📥 Descargar reporte en PDF\n              </a>\n            </p>\n            ",
+    "fecha": "2025-11-28 13:06:57.595309"
+  },
+  {
+    "rol": "usuario",
+    "mensaje": "4",
+    "fecha": "2025-11-28 13:07:05.627675"
+  },
+  {
+    "rol": "bot",
+    "mensaje": "\n                <p>🏭 <b>Reporte de Proveedores generado correctamente.</b></p>\n                <p>Se encontraron <b>21</b> proveedores registrados.</p>\n\n                <table class=\"tabla-datos\">\n                  <thead>\n                    <tr>\n                      <th>ID</th>\n                      <th>Nombre</th>\n                      <th>Contacto</th>\n                    </tr>\n                  </thead>\n                  <tbody>\n                    \n                    <tr>\n                      <td>1</td>\n                      <td>Farmacias del Ahorro</td>\n                      <td>Teléfono: 800-100-3456, Email: contacto@farmaciasd</td>\n                    </tr>\n                    \n                    <tr>\n                      <td>2</td>\n                      <td>Farmacias Guadalajara</td>\n                      <td>Teléfono: 800-999-1234, Email: atencion@farmaciasg</td>\n                    </tr>\n                    \n                    <tr>\n                      <td>3</td>\n                      <td>Farmacias Similares</td>\n                      <td>Teléfono: 800-777-8888, Email: contacto@farmaciasd</td>\n                    </tr>\n                    \n                    <tr>\n                      <td>4</td>\n                      <td>Grupo Fármacos Especializados</td>\n                      <td>Teléfono: 55-5577-1234, Email: ventas@grupofarmaco</td>\n                    </tr>\n                    \n                    <tr>\n                      <td>5</td>\n                      <td>Sanofi México</td>\n                      <td>Teléfono: 800-123-4567, Email: info@sanofi.com</td>\n                    </tr>\n                    \n                    <tr>\n                      <td>6</td>\n                      <td>Novartis México</td>\n                      <td>Teléfono: 800-800-3020, Email: contacto@novartis.c</td>\n                    </tr>\n                    \n                    <tr>\n                      <td>7</td>\n                      <td>Bayer de México</td>\n                      <td>Teléfono: 55-5257-8999, Email: atencion@bayer.com.</td>\n                    </tr>\n                    \n                    <tr>\n                      <td>8</td>\n                      <td>GlaxoSmithKline México</td>\n                      <td>Teléfono: 800-800-8888, Email: gsk_mexico@glaxosmi</td>\n                    </tr>\n                    \n                    <tr>\n                      <td>9</td>\n                      <td>AstraZeneca México</td>\n                      <td>Teléfono: 800-200-3000, Email: atencion@astrazenec</td>\n                    </tr>\n                    \n                    <tr>\n                      <td>10</td>\n                      <td>Laboratorios Pisa</td>\n                      <td>Teléfono: 55-5531-9876, Email: info@pisalabs.com</td>\n                    </tr>\n                    \n                  </tbody>\n                </table>\n\n                <p>\n                  <a href=\"static/reportes\\reporte_reporte_de_proveedores_20251128_130709.pdf\" target=\"_blank\" class=\"pdf-btn\">\n                    📥 Descargar reporte en PDF\n                  </a>\n                </p>\n                ",
+    "fecha": "2025-11-28 13:07:09.739678"
+  },
+  {
+    "rol": "usuario",
+    "mensaje": "5",
+    "fecha": "2025-11-28 13:07:18.269382"
+  },
+  {
+    "rol": "bot",
+    "mensaje": "\n                <div class=\"bot-card\">\n                  <p class=\"title\">👤 <b>No pude obtener la lista de usuarios.</b></p>\n                  <p class=\"subtitle\">\n                    El módulo de <b>usuarios</b> en la API devolvió un\n                    <b>error</b>.\n                  </p>\n                  <p>\n                    🔧 Revisa el endpoint\n                    <code>/api/users/all</code> en la API de PharmaControl\n                    (entidad <code>Usuario</code> y su tabla en MySQL).\n                  </p>\n                  <p class=\"hint\">\n                    Mientras tanto, puedes seguir consultando\n                    <b>medicamentos</b>, <b>proveedores</b> o generar\n                    <b>reportes en PDF</b>.\n                  </p>\n                  <p><small style=\"color:#888\">Detalle técnico: 500 Server Error: Internal Server Error for url: http://localhost:3000/api/users/all</small></p>\n                </div>\n                ",
+    "fecha": "2025-11-28 13:07:22.422976"
+  },
+  {
+    "rol": "usuario",
+    "mensaje": "ibuprofeno    que e s",
+    "fecha": "2025-11-28 13:07:47.739937"
+  },
+  {
+    "rol": "bot",
+    "mensaje": "\n                <div class=\"bot-card\">\n                  <p class=\"title\">💊 <b>Ibuprofeno    que e s</b></p>\n\n                  <p class=\"subtitle\">\n                    No encontré este medicamento en el <b>inventario local</b>,\n                    pero te comparto una descripción general:\n                  </p>\n\n                  <div class=\"ia-block\">\n                    🧾 <b>Descripción generada por IA:</b><br>\n                    El ibuprofeno es un medicamento antiinflamatorio no esteroideo (AINE) que se utiliza comúnmente para aliviar el dolor, la fiebre y la inflamación. Se usa para tratar una variedad de condiciones como dolor de cabeza, dolor muscular, artritis, dolor de muelas y cólicos menstruales. Se toma por vía oral con alimentos, generalmente cada 4 a 6 horas según sea necesario, siguiendo las indicaciones de un médico o farmacéutico. Es importante no exceder la dosis recomendada y consultar a un profesional de la salud antes de usarlo, especialmente si se tiene alguna condición médica preexistente.\n                  </div>\n\n                  <p class=\"hint\">\n                    ✏️ Si quieres que aparezca en futuros reportes,\n                    regístralo en el módulo de <b>Medicamentos</b>\n                    dentro de PharmaControl.\n                  </p>\n                </div>\n                ",
+    "fecha": "2025-11-28 13:07:52.742775"
+  },
+  {
+    "rol": "usuario",
+    "mensaje": "quiero mandar un correo",
+    "fecha": "2025-11-28 13:08:05.789779"
+  },
+  {
+    "rol": "bot",
+    "mensaje": "\n                <div class=\"bot-card\">\n                  <p class=\"title\">💊 <b>Quiero mandar un correo</b></p>\n\n                  <p class=\"subtitle\">\n                    No encontré este medicamento en el <b>inventario local</b>,\n                    pero te comparto una descripción general:\n                  </p>\n\n                  <div class=\"ia-block\">\n                    🧾 <b>Descripción generada por IA:</b><br>\n                    Lamento informarte que \"quiero mandar un correo\" no es un medicamento real. Es posible que se haya producido un error al escribir el nombre del medicamento. Si tienes alguna otra consulta sobre un fármaco específico, estaré encantado de ayudarte.\n                  </div>\n\n                  <p class=\"hint\">\n                    ✏️ Si quieres que aparezca en futuros reportes,\n                    regístralo en el módulo de <b>Medicamentos</b>\n                    dentro de PharmaControl.\n                  </p>\n                </div>\n                ",
+    "fecha": "2025-11-28 13:08:09.802417"
+  },
+  {
+    "rol": "usuario",
+    "mensaje": "que haces ?",
+    "fecha": "2025-11-28 13:08:21.633491"
+  },
+  {
+    "rol": "bot",
+    "mensaje": "\n                <div class=\"bot-card\">\n                  <p class=\"title\">💊 <b>Que haces ?</b></p>\n\n                  <p class=\"subtitle\">\n                    No encontré este medicamento en el <b>inventario local</b>,\n                    pero te comparto una descripción general:\n                  </p>\n\n                  <div class=\"ia-block\">\n                    🧾 <b>Descripción generada por IA:</b><br>\n                    El medicamento \"Que Haces?\" es un fármaco utilizado para tratar la ansiedad y los trastornos del sueño. Su principio activo es el zolpidem, que actúa como un inductor del sueño al aumentar la actividad de la hormona GABA en el cerebro. Se recomienda tomar una dosis de 10 mg por la noche, justo antes de acostarse, para facilitar la conciliación del sueño. Es importante seguir las indicaciones del médico y no exceder la dosis recomendada, ya que el uso excesivo puede generar dependencia y otros efectos secundarios.\n                  </div>\n\n                  <p class=\"hint\">\n                    ✏️ Si quieres que aparezca en futuros reportes,\n                    regístralo en el módulo de <b>Medicamentos</b>\n                    dentro de PharmaControl.\n                  </p>\n                </div>\n                ",
+    "fecha": "2025-11-28 13:08:25.254412"
+  }
+]

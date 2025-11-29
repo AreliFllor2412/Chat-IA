@@ -1,0 +1,67 @@
+[
+  {
+    "rol": "bot",
+    "mensaje": "\n<div class=\"bot-card\">\n  <div class=\"bot-header\">\n    <span class=\"bot-chip\">🤖 Asistente IA · PharmaControl</span>\n  </div>\n\n  <p class=\"title\">\n    ¡Hola! Soy la inteligencia artificial de <b>PharmaControl</b>.\n  </p>\n\n  <p class=\"subtitle\">Puedo ayudarte con:</p>\n\n  <ul class=\"bot-list\">\n    <li>💊 <strong>Existencias de medicamentos</strong></li>\n    <li>⚠️ <strong>Alertas de medicamentos sin stock</strong></li>\n    <li>📑 <strong>Reportes en PDF</strong></li>\n    <li>📦 <strong>Listado de proveedores</strong></li>\n    <li>👤 <strong>Usuarios registrados</strong></li>\n  </ul>\n\n  <p class=\"hint\">\n    👉 Ejemplos:\n    <code>reporte general</code>,\n    <code>sin stock</code>,\n    <code>proveedores</code>,\n    <code>usuarios</code>.\n  </p>\n</div>\n",
+    "fecha": "2025-11-28 12:33:10.579790"
+  },
+  {
+    "rol": "usuario",
+    "mensaje": "reporte de medicamentos",
+    "fecha": "2025-11-28 12:33:19.517037"
+  },
+  {
+    "rol": "bot",
+    "mensaje": "\n            <p>📑 <b>Reporte general generado exitosamente.</b></p>\n            <p>📦 Incluye <b>44</b> medicamentos registrados.</p>\n            <p>\n              <a href=\"static/reportes\\reporte_reporte_general_de_medicamentos_20251128_123321.pdf\" target=\"_blank\" class=\"pdf-btn\">\n                📥 Descargar reporte en PDF\n              </a>\n            </p>\n            ",
+    "fecha": "2025-11-28 12:33:21.960055"
+  },
+  {
+    "rol": "usuario",
+    "mensaje": "reporte de usuarios",
+    "fecha": "2025-11-28 12:33:32.337288"
+  },
+  {
+    "rol": "bot",
+    "mensaje": "❌ Error inesperado: 500 Server Error: Internal Server Error for url: http://localhost:3000/api/users/all",
+    "fecha": "2025-11-28 12:33:36.456252"
+  },
+  {
+    "rol": "usuario",
+    "mensaje": "reporte  de provedores",
+    "fecha": "2025-11-28 12:34:25.388033"
+  },
+  {
+    "rol": "bot",
+    "mensaje": "\n            <p>📑 <b>Reporte general generado exitosamente.</b></p>\n            <p>📦 Incluye <b>44</b> medicamentos registrados.</p>\n            <p>\n              <a href=\"static/reportes\\reporte_reporte_general_de_medicamentos_20251128_123427.pdf\" target=\"_blank\" class=\"pdf-btn\">\n                📥 Descargar reporte en PDF\n              </a>\n            </p>\n            ",
+    "fecha": "2025-11-28 12:34:27.434653"
+  },
+  {
+    "rol": "usuario",
+    "mensaje": "lsitado de proveedores",
+    "fecha": "2025-11-28 12:34:52.760589"
+  },
+  {
+    "rol": "bot",
+    "mensaje": "\n                <p>🏭 <b>Reporte de Proveedores generado correctamente.</b></p>\n                <p>Se encontraron <b>20</b> proveedores registrados.</p>\n\n                <table class=\"tabla-datos\">\n                  <thead>\n                    <tr>\n                      <th>ID</th>\n                      <th>Nombre</th>\n                      <th>Contacto</th>\n                    </tr>\n                  </thead>\n                  <tbody>\n                    \n                    <tr>\n                      <td>1</td>\n                      <td>Farmacias del Ahorro</td>\n                      <td>Teléfono: 800-100-3456, Email: contacto@farmaciasd</td>\n                    </tr>\n                    \n                    <tr>\n                      <td>2</td>\n                      <td>Farmacias Guadalajara</td>\n                      <td>Teléfono: 800-999-1234, Email: atencion@farmaciasg</td>\n                    </tr>\n                    \n                    <tr>\n                      <td>3</td>\n                      <td>Farmacias Similares</td>\n                      <td>Teléfono: 800-777-8888, Email: contacto@farmaciasd</td>\n                    </tr>\n                    \n                    <tr>\n                      <td>4</td>\n                      <td>Grupo Fármacos Especializados</td>\n                      <td>Teléfono: 55-5577-1234, Email: ventas@grupofarmaco</td>\n                    </tr>\n                    \n                    <tr>\n                      <td>5</td>\n                      <td>Sanofi México</td>\n                      <td>Teléfono: 800-123-4567, Email: info@sanofi.com</td>\n                    </tr>\n                    \n                    <tr>\n                      <td>6</td>\n                      <td>Novartis México</td>\n                      <td>Teléfono: 800-800-3020, Email: contacto@novartis.c</td>\n                    </tr>\n                    \n                    <tr>\n                      <td>7</td>\n                      <td>Bayer de México</td>\n                      <td>Teléfono: 55-5257-8999, Email: atencion@bayer.com.</td>\n                    </tr>\n                    \n                    <tr>\n                      <td>8</td>\n                      <td>GlaxoSmithKline México</td>\n                      <td>Teléfono: 800-800-8888, Email: gsk_mexico@glaxosmi</td>\n                    </tr>\n                    \n                    <tr>\n                      <td>9</td>\n                      <td>AstraZeneca México</td>\n                      <td>Teléfono: 800-200-3000, Email: atencion@astrazenec</td>\n                    </tr>\n                    \n                    <tr>\n                      <td>10</td>\n                      <td>Laboratorios Pisa</td>\n                      <td>Teléfono: 55-5531-9876, Email: info@pisalabs.com</td>\n                    </tr>\n                    \n                  </tbody>\n                </table>\n\n                <p>\n                  <a href=\"static/reportes\\reporte_reporte_de_proveedores_20251128_123456.pdf\" target=\"_blank\" class=\"pdf-btn\">\n                    📥 Descargar reporte en PDF\n                  </a>\n                </p>\n                ",
+    "fecha": "2025-11-28 12:34:56.874402"
+  },
+  {
+    "rol": "usuario",
+    "mensaje": "listado porfa",
+    "fecha": "2025-11-28 12:37:05.414364"
+  },
+  {
+    "rol": "bot",
+    "mensaje": "💊 <b>Listado porfa</b><br>📂 No se encontró en la base local, pero aquí tienes información general:<br><br>🧾 <b>Descripción generada por IA:</b><br>Lamento informarte que no puedo proporcionar información sobre un medicamento específico llamado \"listado porfa\", ya que no existe en mi base de datos. Si puedes proporcionarme el nombre correcto de un medicamento, estaré encantado de darte información sobre su uso, indicaciones y dosificación. ¡Estoy aquí para ayudarte!",
+    "fecha": "2025-11-28 12:37:10.385906"
+  },
+  {
+    "rol": "usuario",
+    "mensaje": "listado de    proveedores",
+    "fecha": "2025-11-28 12:37:22.326073"
+  },
+  {
+    "rol": "bot",
+    "mensaje": "\n                <p>🏭 <b>Reporte de Proveedores generado correctamente.</b></p>\n                <p>Se encontraron <b>21</b> proveedores registrados.</p>\n\n                <table class=\"tabla-datos\">\n                  <thead>\n                    <tr>\n                      <th>ID</th>\n                      <th>Nombre</th>\n                      <th>Contacto</th>\n                    </tr>\n                  </thead>\n                  <tbody>\n                    \n                    <tr>\n                      <td>1</td>\n                      <td>Farmacias del Ahorro</td>\n                      <td>Teléfono: 800-100-3456, Email: contacto@farmaciasd</td>\n                    </tr>\n                    \n                    <tr>\n                      <td>2</td>\n                      <td>Farmacias Guadalajara</td>\n                      <td>Teléfono: 800-999-1234, Email: atencion@farmaciasg</td>\n                    </tr>\n                    \n                    <tr>\n                      <td>3</td>\n                      <td>Farmacias Similares</td>\n                      <td>Teléfono: 800-777-8888, Email: contacto@farmaciasd</td>\n                    </tr>\n                    \n                    <tr>\n                      <td>4</td>\n                      <td>Grupo Fármacos Especializados</td>\n                      <td>Teléfono: 55-5577-1234, Email: ventas@grupofarmaco</td>\n                    </tr>\n                    \n                    <tr>\n                      <td>5</td>\n                      <td>Sanofi México</td>\n                      <td>Teléfono: 800-123-4567, Email: info@sanofi.com</td>\n                    </tr>\n                    \n                    <tr>\n                      <td>6</td>\n                      <td>Novartis México</td>\n                      <td>Teléfono: 800-800-3020, Email: contacto@novartis.c</td>\n                    </tr>\n                    \n                    <tr>\n                      <td>7</td>\n                      <td>Bayer de México</td>\n                      <td>Teléfono: 55-5257-8999, Email: atencion@bayer.com.</td>\n                    </tr>\n                    \n                    <tr>\n                      <td>8</td>\n                      <td>GlaxoSmithKline México</td>\n                      <td>Teléfono: 800-800-8888, Email: gsk_mexico@glaxosmi</td>\n                    </tr>\n                    \n                    <tr>\n                      <td>9</td>\n                      <td>AstraZeneca México</td>\n                      <td>Teléfono: 800-200-3000, Email: atencion@astrazenec</td>\n                    </tr>\n                    \n                    <tr>\n                      <td>10</td>\n                      <td>Laboratorios Pisa</td>\n                      <td>Teléfono: 55-5531-9876, Email: info@pisalabs.com</td>\n                    </tr>\n                    \n                  </tbody>\n                </table>\n\n                <p>\n                  <a href=\"static/reportes\\reporte_reporte_de_proveedores_20251128_123726.pdf\" target=\"_blank\" class=\"pdf-btn\">\n                    📥 Descargar reporte en PDF\n                  </a>\n                </p>\n                ",
+    "fecha": "2025-11-28 12:37:26.448300"
+  }
+]

@@ -1,0 +1,27 @@
+[
+  {
+    "rol": "bot",
+    "mensaje": "\n<div class=\"bot-card\">\n  <div class=\"bot-header\">\n    <span class=\"bot-chip\">🤖 Asistente IA · PharmaControl</span>\n  </div>\n\n  <p class=\"title\">\n    ¡Hola! Soy la inteligencia artificial de <b>PharmaControl</b>.\n  </p>\n\n  <p class=\"subtitle\">Puedo ayudarte rápidamente con:</p>\n\n  <ol class=\"bot-list\">\n    <li><b>1)</b> Ver <b>reporte general</b> de medicamentos.</li>\n    <li><b>2)</b> Ver <b>medicamentos sin stock</b>.</li>\n    <li><b>3)</b> Ver <b>medicamentos con existencia</b>.</li>\n    <li><b>4)</b> Ver <b>proveedores</b>.</li>\n    <li><b>5)</b> Ver <b>usuarios</b>.</li>\n    <li><b>6)</b> Buscar un <b>medicamento por nombre</b>.</li>\n  </ol>\n\n  <p class=\"hint\">\n    👉 Puedes escribir por ejemplo:\n    <code>1</code>,\n    <code>reporte general</code>,\n    <code>sin stock</code>,\n    <code>existencias</code>,\n    <code>proveedores</code>,\n    <code>usuarios</code>,\n    <code>paracetamol</code>.\n  </p>\n</div>\n",
+    "fecha": "2025-11-28 17:38:49.404309"
+  },
+  {
+    "rol": "usuario",
+    "mensaje": "dame un reporte de medicamentos",
+    "fecha": "2025-11-28 17:38:56.694611"
+  },
+  {
+    "rol": "bot",
+    "mensaje": "❌ No se pudo conectar con la API de medicamentos.<br>Detalle técnico: 404 Client Error: Not Found for url: https://api.pharmacontrol.site/api/medicamentos/all/medicamentos/all",
+    "fecha": "2025-11-28 17:38:57.666378"
+  },
+  {
+    "rol": "usuario",
+    "mensaje": "Tú: dame un reporte de medicamentos",
+    "fecha": "2025-11-28 17:41:04.451945"
+  },
+  {
+    "rol": "bot",
+    "mensaje": "❌ No se pudo conectar con la API de medicamentos.<br>Detalle técnico: 404 Client Error: Not Found for url: https://api.pharmacontrol.site/api/medicamentos/all/medicamentos/all",
+    "fecha": "2025-11-28 17:41:05.304934"
+  }
+]

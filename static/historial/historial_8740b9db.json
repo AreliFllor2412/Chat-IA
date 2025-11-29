@@ -1,0 +1,17 @@
+[
+  {
+    "rol": "bot",
+    "mensaje": "👋 ¡Bienvenido a **PharmaControl**!<br>Puedo ayudarte con:<br>💊 *Consultar existencias de medicamentos*<br>⚠️ *Ver medicamentos sin stock*<br>📑 *Generar reportes en PDF*<br>📦 *Listar proveedores*<br>👤 *Listar usuarios registrados*<br><br>👉 Ejemplo: escribe `reporte general` o `proveedores`.",
+    "fecha": "2025-10-16 22:52:31.170625"
+  },
+  {
+    "rol": "usuario",
+    "mensaje": "reporte de  proveedores",
+    "fecha": "2025-10-16 22:52:47.430757"
+  },
+  {
+    "rol": "bot",
+    "mensaje": "🏭 **Reporte de Proveedores generado correctamente.**<br>Se encontraron **20 proveedores registrados.**<br><br><a href='static/reportes\\reporte_reporte_de_proveedores_20251016_225247.pdf' target='_blank' class='pdf-btn'>📥 Descargar Reporte</a>",
+    "fecha": "2025-10-16 22:52:47.503093"
+  }
+]

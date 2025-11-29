@@ -1,0 +1,17 @@
+[
+  {
+    "rol": "bot",
+    "mensaje": "👋 ¡Bienvenido a **PharmaControl**!<br>Puedo ayudarte con:<br>💊 *Consultar existencias de medicamentos*<br>⚠️ *Ver medicamentos sin stock*<br>📑 *Generar reportes en PDF*<br>📦 *Listar proveedores*<br>👤 *Listar usuarios registrados*<br><br>👉 Ejemplo: escribe `reporte general` o `proveedores`.",
+    "fecha": "2025-10-16 23:51:59.979357"
+  },
+  {
+    "rol": "usuario",
+    "mensaje": "que  es  paracetamol",
+    "fecha": "2025-10-16 23:52:09.362959"
+  },
+  {
+    "rol": "bot",
+    "mensaje": "🤖 No encontré información sobre **que  es  paracetamol**.<br>Puedes pedirme:<br>💊 `existencias`<br>⚠️ `sin existencia`<br>📑 `reporte general`<br>📦 `proveedores`<br>👤 `usuarios`",
+    "fecha": "2025-10-16 23:52:09.505774"
+  }
+]

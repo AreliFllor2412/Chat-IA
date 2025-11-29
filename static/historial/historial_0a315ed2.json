@@ -1,0 +1,17 @@
+[
+  {
+    "rol": "bot",
+    "mensaje": "\n<div class=\"bot-card\">\n  <div class=\"bot-header\">\n    <span class=\"bot-chip\">🤖 Asistente IA · PharmaControl</span>\n  </div>\n\n  <p class=\"title\">\n    ¡Hola! Soy la inteligencia artificial de <b>PharmaControl</b>.\n  </p>\n\n  <p class=\"subtitle\">Puedo ayudarte rápidamente con:</p>\n\n  <ol class=\"bot-list\">\n    <li><b>1)</b> Ver <b>reporte general</b> de medicamentos.</li>\n    <li><b>2)</b> Ver <b>medicamentos sin stock</b>.</li>\n    <li><b>3)</b> Ver <b>medicamentos con existencia</b>.</li>\n    <li><b>4)</b> Ver <b>proveedores</b>.</li>\n    <li><b>5)</b> Ver <b>usuarios</b>.</li>\n    <li><b>6)</b> Buscar un <b>medicamento por nombre</b>.</li>\n  </ol>\n\n  <p class=\"hint\">\n    👉 Puedes escribir por ejemplo:\n    <code>1</code>,\n    <code>reporte general</code>,\n    <code>sin stock</code>,\n    <code>existencias</code>,\n    <code>proveedores</code>,\n    <code>usuarios</code>,\n    <code>paracetamol</code>.\n  </p>\n</div>\n",
+    "fecha": "2025-11-28 13:29:32.432251"
+  },
+  {
+    "rol": "usuario",
+    "mensaje": "5",
+    "fecha": "2025-11-28 13:29:36.433582"
+  },
+  {
+    "rol": "bot",
+    "mensaje": "\n                <div class=\"bot-card error-card\">\n\n                  <p class=\"title\">\n                    👤 <b>No pude obtener la lista de usuarios.</b>\n                  </p>\n\n                  <p class=\"subtitle\">\n                    Parece que el módulo de <b>usuarios</b> en tu API presentó un inconveniente.\n                  </p>\n\n                  <div class=\"info-block\">\n                    🔧 <b>Revisa el endpoint:</b><br>\n                    <code>/api/users/all</code><br>\n                    (Entidad <code>Usuario</code> y su tabla en MySQL).\n                  </div>\n\n                  <p class=\"hint\">\n                    Mientras tanto, puedes seguir consultando\n                    <b>medicamentos</b>, <b>proveedores</b> o generar\n                    <b>reportes en PDF</b>.\n                  </p>\n\n                  <small class=\"tech-detail\">\n                    🔍 Detalles técnicos: 500 Server Error: Internal Server Error for url: http://localhost:3000/api/users/all\n                  </small>\n                </div>\n                ",
+    "fecha": "2025-11-28 13:29:40.603197"
+  }
+]

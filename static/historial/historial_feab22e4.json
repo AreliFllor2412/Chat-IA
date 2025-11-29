@@ -1,0 +1,17 @@
+[
+  {
+    "rol": "bot",
+    "mensaje": "\n<div class=\"bot-card\">\n  <div class=\"bot-header\">\n    <span class=\"bot-chip\">🤖 Asistente IA · PharmaControl</span>\n  </div>\n\n  <p class=\"title\">\n    ¡Hola! Soy la inteligencia artificial de <b>PharmaControl</b>.\n  </p>\n\n  <p class=\"subtitle\">Puedo ayudarte con:</p>\n\n  <ul class=\"bot-list\">\n    <li>💊 <strong>Existencias de medicamentos</strong></li>\n    <li>⚠️ <strong>Alertas de medicamentos sin stock</strong></li>\n    <li>📑 <strong>Reportes en PDF</strong></li>\n    <li>📦 <strong>Listado de proveedores</strong></li>\n    <li>👤 <strong>Usuarios registrados</strong></li>\n  </ul>\n\n  <p class=\"hint\">\n    👉 Ejemplos:\n    <code>reporte general</code>,\n    <code>sin stock</code>,\n    <code>proveedores</code>,\n    <code>usuarios</code>.\n  </p>\n</div>\n",
+    "fecha": "2025-11-28 11:34:59.309607"
+  },
+  {
+    "rol": "usuario",
+    "mensaje": "reporte de proveedores",
+    "fecha": "2025-11-28 11:35:09.422945"
+  },
+  {
+    "rol": "bot",
+    "mensaje": "❌ Error inesperado: 404 Client Error: Not Found for url: http://localhost:3000/api/proveedores/all",
+    "fecha": "2025-11-28 11:35:09.448860"
+  }
+]

@@ -1,0 +1,47 @@
+[
+  {
+    "rol": "bot",
+    "mensaje": "\n<div class=\"bot-card\">\n  <div class=\"bot-header\">\n    <span class=\"bot-chip\">🤖 Asistente IA · PharmaControl</span>\n  </div>\n\n  <p class=\"title\">\n    ¡Hola! Soy la inteligencia artificial de <b>PharmaControl</b>.\n  </p>\n\n  <p class=\"subtitle\">Puedo ayudarte con:</p>\n\n  <ul class=\"bot-list\">\n    <li>💊 <strong>Existencias de medicamentos</strong></li>\n    <li>⚠️ <strong>Alertas de medicamentos sin stock</strong></li>\n    <li>📑 <strong>Reportes en PDF</strong></li>\n    <li>📦 <strong>Listado de proveedores</strong></li>\n    <li>👤 <strong>Usuarios registrados</strong></li>\n  </ul>\n\n  <p class=\"hint\">\n    👉 Ejemplos:\n    <code>reporte general</code>,\n    <code>sin stock</code>,\n    <code>proveedores</code>,\n    <code>usuarios</code>.\n  </p>\n</div>\n",
+    "fecha": "2025-11-28 12:48:57.047048"
+  },
+  {
+    "rol": "usuario",
+    "mensaje": "que  es naproxeno",
+    "fecha": "2025-11-28 12:49:19.832037"
+  },
+  {
+    "rol": "bot",
+    "mensaje": "💊 <b>Que  es naproxeno</b><br>📂 No se encontró en la base local, pero aquí tienes información general:<br><br>🧾 <b>Descripción generada por IA:</b><br>El naproxeno es un medicamento antiinflamatorio no esteroideo (AINE) que se utiliza comúnmente para aliviar el dolor, la inflamación y la fiebre. Se usa principalmente en el tratamiento de condiciones como artritis, dolor muscular, dolor de cabeza, dolor menstrual y dolor de espalda. Se administra por vía oral en forma de comprimidos y la dosis generalmente varía según la condición a tratar, por lo que es importante seguir las indicaciones del médico o farmacéutico. Es importante tomarlo con alimentos o leche para reducir el riesgo de efectos secundarios gastrointestinales. Como cualquier medicamento, el naproxeno puede tener efectos secundarios, por lo que es importante hablar con un profesional de la salud antes de usarlo, especialmente si se tiene alguna condición médica preexistente.",
+    "fecha": "2025-11-28 12:49:25.128157"
+  },
+  {
+    "rol": "usuario",
+    "mensaje": "ibuprofeno",
+    "fecha": "2025-11-28 12:49:33.544605"
+  },
+  {
+    "rol": "bot",
+    "mensaje": "💊 <b>Ibuprofeno</b><br>📂 No se encontró en la base local, pero aquí tienes información general:<br><br>🧾 <b>Descripción generada por IA:</b><br>El ibuprofeno es un medicamento antiinflamatorio no esteroideo (AINE) que se utiliza comúnmente para aliviar el dolor, la fiebre y la inflamación. Se usa para tratar una variedad de condiciones como dolores de cabeza, dolores musculares, artritis, dolor menstrual y dolor de muelas, entre otros. Se puede administrar por vía oral en forma de tabletas o cápsulas, siguiendo las indicaciones del médico o las instrucciones del envase. Es importante tomar ibuprofeno con alimentos o leche para reducir el riesgo de irritación estomacal. Se recomienda no exceder la dosis y consultar a un profesional de la salud si los síntomas persisten.",
+    "fecha": "2025-11-28 12:49:37.750931"
+  },
+  {
+    "rol": "usuario",
+    "mensaje": "listado de   usuarios",
+    "fecha": "2025-11-28 12:49:54.589480"
+  },
+  {
+    "rol": "bot",
+    "mensaje": "❌ Error inesperado: 500 Server Error: Internal Server Error for url: http://localhost:3000/api/users/all",
+    "fecha": "2025-11-28 12:49:58.705638"
+  },
+  {
+    "rol": "usuario",
+    "mensaje": "listado de  usuarios",
+    "fecha": "2025-11-28 12:54:18.976604"
+  },
+  {
+    "rol": "bot",
+    "mensaje": "❌ Error inesperado: 500 Server Error: Internal Server Error for url: http://localhost:3000/api/users/all",
+    "fecha": "2025-11-28 12:54:23.242228"
+  }
+]

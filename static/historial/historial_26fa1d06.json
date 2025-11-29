@@ -1,0 +1,57 @@
+[
+  {
+    "rol": "bot",
+    "mensaje": "\n<div class=\"bot-card\">\n  <div class=\"bot-header\">\n    <span class=\"bot-chip\">🤖 Asistente IA · PharmaControl</span>\n  </div>\n\n  <p class=\"title\">\n    ¡Hola! Soy la inteligencia artificial de <b>PharmaControl</b>.\n  </p>\n\n  <p class=\"subtitle\">Puedo ayudarte con:</p>\n\n  <ul class=\"bot-list\">\n    <li>💊 <strong>Existencias de medicamentos</strong></li>\n    <li>⚠️ <strong>Alertas de medicamentos sin stock</strong></li>\n    <li>📑 <strong>Reportes en PDF</strong></li>\n    <li>📦 <strong>Listado de proveedores</strong></li>\n    <li>👤 <strong>Usuarios registrados</strong></li>\n  </ul>\n\n  <p class=\"hint\">\n    👉 Ejemplos:\n    <code>reporte general</code>,\n    <code>sin stock</code>,\n    <code>proveedores</code>,\n    <code>usuarios</code>.\n  </p>\n</div>\n",
+    "fecha": "2025-11-28 12:40:45.409122"
+  },
+  {
+    "rol": "usuario",
+    "mensaje": "hola",
+    "fecha": "2025-11-28 12:40:50.665961"
+  },
+  {
+    "rol": "bot",
+    "mensaje": "\n<div class=\"bot-card\">\n  <div class=\"bot-header\">\n    <span class=\"bot-chip\">🤖 Asistente IA · PharmaControl</span>\n  </div>\n\n  <p class=\"title\">\n    ¡Hola! Soy la inteligencia artificial de <b>PharmaControl</b>.\n  </p>\n\n  <p class=\"subtitle\">Puedo ayudarte con:</p>\n\n  <ul class=\"bot-list\">\n    <li>💊 <strong>Existencias de medicamentos</strong></li>\n    <li>⚠️ <strong>Alertas de medicamentos sin stock</strong></li>\n    <li>📑 <strong>Reportes en PDF</strong></li>\n    <li>📦 <strong>Listado de proveedores</strong></li>\n    <li>👤 <strong>Usuarios registrados</strong></li>\n  </ul>\n\n  <p class=\"hint\">\n    👉 Ejemplos:\n    <code>reporte general</code>,\n    <code>sin stock</code>,\n    <code>proveedores</code>,\n    <code>usuarios</code>.\n  </p>\n</div>\n",
+    "fecha": "2025-11-28 12:40:52.852987"
+  },
+  {
+    "rol": "usuario",
+    "mensaje": "sin stock",
+    "fecha": "2025-11-28 12:41:03.770666"
+  },
+  {
+    "rol": "bot",
+    "mensaje": "\n                <p>⚠️ <b>Medicamentos SIN existencia</b></p>\n                <p>📄 Se encontraron <b>44</b> productos agotados.</p>\n\n                <table class=\"tabla-datos\">\n                  <thead>\n                    <tr>\n                      <th>ID</th>\n                      <th>Nombre</th>\n                      <th>Existencias</th>\n                      <th>Lote</th>\n                    </tr>\n                  </thead>\n                  <tbody>\n                    \n                    <tr>\n                      <td>1</td>\n                      <td>GENOPRAZOL 20 MG CAP</td>\n                      <td>0</td>\n                      <td>650240036415</td>\n                    </tr>\n                    \n                    <tr>\n                      <td>2</td>\n                      <td>TABCIN NOCHE 12 CAPS</td>\n                      <td>0</td>\n                      <td>7501008499702</td>\n                    </tr>\n                    \n                    <tr>\n                      <td>3</td>\n                      <td>THERAFLU RESFRIADO SEVERO 10 SOBRES</td>\n                      <td>0</td>\n                      <td>7501065000835</td>\n                    </tr>\n                    \n                    <tr>\n                      <td>4</td>\n                      <td>MELOX PLUS SUSP CEREZA 360 ML</td>\n                      <td>0</td>\n                      <td>7501072310392</td>\n                    </tr>\n                    \n                    <tr>\n                      <td>5</td>\n                      <td>JERINGA 5ML VERDE</td>\n                      <td>0</td>\n                      <td>7501073025493</td>\n                    </tr>\n                    \n                    <tr>\n                      <td>6</td>\n                      <td>JERINGA 5 ML NEGRA PLASTIPAK</td>\n                      <td>0</td>\n                      <td>7501073025523</td>\n                    </tr>\n                    \n                    <tr>\n                      <td>7</td>\n                      <td>ATROXOLAM JBE 150 ML</td>\n                      <td>0</td>\n                      <td>7501075723830</td>\n                    </tr>\n                    \n                    <tr>\n                      <td>8</td>\n                      <td>EUFENIL 400 10 CAP</td>\n                      <td>0</td>\n                      <td>7501130713516</td>\n                    </tr>\n                    \n                    <tr>\n                      <td>9</td>\n                      <td>EUCALIPTINE AMP PZA</td>\n                      <td>0</td>\n                      <td>7501159526029</td>\n                    </tr>\n                    \n                    <tr>\n                      <td>10</td>\n                      <td>PENIPOT 800 000 UI AMP</td>\n                      <td>0</td>\n                      <td>7501349011175</td>\n                    </tr>\n                    \n                  </tbody>\n                </table>\n\n                <p>\n                  <a href=\"static/reportes\\reporte_medicamentos_sin_existencia_20251128_124105.pdf\" target=\"_blank\" class=\"pdf-btn\">\n                    📥 Descargar reporte en PDF\n                  </a>\n                </p>\n                ",
+    "fecha": "2025-11-28 12:41:05.823333"
+  },
+  {
+    "rol": "usuario",
+    "mensaje": "que es  naproxeno ?",
+    "fecha": "2025-11-28 12:41:18.190536"
+  },
+  {
+    "rol": "bot",
+    "mensaje": "💊 <b>Que es  naproxeno ?</b><br>📂 No se encontró en la base local, pero aquí tienes información general:<br><br>🧾 <b>Descripción generada por IA:</b><br>El naproxeno es un medicamento antiinflamatorio no esteroideo (AINE) que se utiliza principalmente para aliviar el dolor y la inflamación causados por condiciones como artritis, dolores musculares, dolor de cabeza, fiebre y dolor menstrual. Se usa comúnmente en el tratamiento a corto plazo de estas condiciones. Se administra por vía oral en forma de tabletas o cápsulas, generalmente de 1 a 2 veces al día, con o sin alimentos, según las indicaciones del médico. Es importante seguir las instrucciones de dosificación y no exceder la dosis recomendada para evitar efectos secundarios. Siempre es recomendable consultar a un profesional de la salud antes de comenzar a tomar cualquier medicamento.",
+    "fecha": "2025-11-28 12:41:22.674358"
+  },
+  {
+    "rol": "usuario",
+    "mensaje": "reportes",
+    "fecha": "2025-11-28 12:42:00.498874"
+  },
+  {
+    "rol": "bot",
+    "mensaje": "\n            <p>📑 <b>Reporte general generado exitosamente.</b></p>\n            <p>📦 Incluye <b>44</b> medicamentos registrados.</p>\n            <p>\n              <a href=\"static/reportes\\reporte_reporte_general_de_medicamentos_20251128_124202.pdf\" target=\"_blank\" class=\"pdf-btn\">\n                📥 Descargar reporte en PDF\n              </a>\n            </p>\n            ",
+    "fecha": "2025-11-28 12:42:02.564848"
+  },
+  {
+    "rol": "usuario",
+    "mensaje": "usuarios  registrados",
+    "fecha": "2025-11-28 12:42:25.807778"
+  },
+  {
+    "rol": "bot",
+    "mensaje": "❌ Error inesperado: 500 Server Error: Internal Server Error for url: http://localhost:3000/api/users/all",
+    "fecha": "2025-11-28 12:42:30.035807"
+  }
+]

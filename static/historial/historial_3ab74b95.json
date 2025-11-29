@@ -1,0 +1,27 @@
+[
+  {
+    "rol": "bot",
+    "mensaje": "👋 ¡Bienvenido a **PharmaControl**!<br>Puedo ayudarte con:<br>💊 *Consultar existencias de medicamentos*<br>⚠️ *Ver medicamentos sin stock*<br>📑 *Generar reportes en PDF*<br>📦 *Listar proveedores*<br>👤 *Listar usuarios registrados*<br><br>👉 Ejemplo: escribe `reporte general` o `proveedores`.",
+    "fecha": "2025-10-16 23:08:40.008402"
+  },
+  {
+    "rol": "usuario",
+    "mensaje": "que  es ibuprofeno ?",
+    "fecha": "2025-10-16 23:08:47.950122"
+  },
+  {
+    "rol": "bot",
+    "mensaje": "🤖 No encontré información sobre **que  es ibuprofeno ?**.<br><br>Puedes pedirme:<br>💊 `existencias`<br>⚠️ `sin existencia`<br>📑 `reporte general`<br>📦 `proveedores`<br>👤 `usuarios`",
+    "fecha": "2025-10-16 23:08:47.975750"
+  },
+  {
+    "rol": "usuario",
+    "mensaje": "ibuprofeno",
+    "fecha": "2025-10-16 23:09:26.902105"
+  },
+  {
+    "rol": "bot",
+    "mensaje": "🤖 No encontré información sobre **ibuprofeno**.<br><br>Puedes pedirme:<br>💊 `existencias`<br>⚠️ `sin existencia`<br>📑 `reporte general`<br>📦 `proveedores`<br>👤 `usuarios`",
+    "fecha": "2025-10-16 23:09:26.910412"
+  }
+]

@@ -1,0 +1,27 @@
+[
+  {
+    "rol": "bot",
+    "mensaje": "\n<div class=\"bot-card\">\n  <div class=\"bot-header\">\n    <span class=\"bot-chip\">🤖 Asistente IA · PharmaControl</span>\n  </div>\n\n  <p class=\"title\">\n    ¡Hola! Soy la inteligencia artificial de <b>PharmaControl</b>.\n  </p>\n\n  <p class=\"subtitle\">Puedo ayudarte con:</p>\n\n  <ul class=\"bot-list\">\n    <li>💊 <strong>Existencias de medicamentos</strong></li>\n    <li>⚠️ <strong>Alertas de medicamentos sin stock</strong></li>\n    <li>📑 <strong>Reportes en PDF</strong></li>\n    <li>📦 <strong>Listado de proveedores</strong></li>\n    <li>👤 <strong>Usuarios registrados</strong></li>\n  </ul>\n\n  <p class=\"hint\">\n    👉 Ejemplos:\n    <code>reporte general</code>,\n    <code>sin stock</code>,\n    <code>proveedores</code>,\n    <code>usuarios</code>.\n  </p>\n</div>\n",
+    "fecha": "2025-11-28 11:33:18.479254"
+  },
+  {
+    "rol": "usuario",
+    "mensaje": "reporte de proeveedores?",
+    "fecha": "2025-11-28 11:33:28.641693"
+  },
+  {
+    "rol": "bot",
+    "mensaje": "📑 <b>Reporte general generado exitosamente.</b><br>📦 Incluye todos los medicamentos registrados.<br><br><a href='static/reportes\\reporte_reporte_general_de_medicamentos_20251128_113328.pdf' target='_blank' class='pdf-btn'>📥 Descargar reporte</a>",
+    "fecha": "2025-11-28 11:33:28.671446"
+  },
+  {
+    "rol": "usuario",
+    "mensaje": "provedores",
+    "fecha": "2025-11-28 11:33:36.574002"
+  },
+  {
+    "rol": "bot",
+    "mensaje": "💊 <b>Provedores</b><br>📂 No se encontró en la base local, pero aquí tienes información general:<br><br>🧾 <b>Descripción generada por IA:</b><br>El medicamento Provedores es un antiinflamatorio no esteroideo (AINE) que contiene el principio activo ibuprofeno. Se utiliza para aliviar el dolor y reducir la inflamación en condiciones como artritis, dolor de cabeza, dolor muscular, dolor de espalda, fiebre, entre otros. Se administra por vía oral en forma de tabletas o cápsulas, generalmente con alimentos para reducir el riesgo de irritación estomacal. Es importante seguir las indicaciones de dosis y frecuencia prescritas por un profesional de la salud. Se recomienda no exceder la dosis recomendada y consultar con un médico si persisten los síntomas o surgen efectos secundarios.",
+    "fecha": "2025-11-28 11:33:40.575491"
+  }
+]

@@ -1,0 +1,17 @@
+[
+  {
+    "rol": "bot",
+    "mensaje": "👋 ¡Bienvenido a *PharmaControl*! Puedes pedirme:\n- ✅ Existencias\n- ⚠️ Sin stock\n- 📑 Reportes\n- 📦 Proveedores\n- 👤 Usuarios",
+    "fecha": "2025-10-01 22:52:43.029289"
+  },
+  {
+    "rol": "usuario",
+    "mensaje": "reporte  de  usuario",
+    "fecha": "2025-10-01 22:52:48.025482"
+  },
+  {
+    "rol": "bot",
+    "mensaje": "👤 Reporte de usuarios generado. [Descargar PDF](static/reportes\\reporte_reporte_de_usuarios_20251001_225248.pdf)",
+    "fecha": "2025-10-01 22:52:48.101182"
+  }
+]
