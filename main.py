@@ -29,7 +29,7 @@ from services.email_service import enviar_correo_reportes
 # =======================
 load_dotenv()
 
-API_BASE_URL = os.getenv("API_BASE_URL", "http://localhost:3000/api")
+API_BASE_URL = os.getenv("API_BASE_URL")
 # 🔐 Token único de servicio para la IA (cuando no haya token de sesión)
 API_SERVICE_TOKEN = os.getenv("API_SERVICE_TOKEN")
 
