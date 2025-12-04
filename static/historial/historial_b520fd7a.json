@@ -1,0 +1,27 @@
+[
+  {
+    "rol": "bot",
+    "mensaje": "\n<div class=\"bot-card\">\n  <div class=\"bot-header\">\n    <span class=\"bot-chip\">🤖 Asistente IA · PharmaControl</span>\n  </div>\n\n  <p class=\"title\">\n    ¡Hola! Soy la inteligencia artificial de <b>PharmaControl</b>.\n  </p>\n\n  <p class=\"subtitle\">Puedo ayudarte rápidamente con:</p>\n\n  <ol class=\"bot-list\">\n    <li><b>1)</b> Ver <b>reporte general</b> de medicamentos.</li>\n    <li><b>2)</b> Ver <b>medicamentos sin stock</b>.</li>\n    <li><b>3)</b> Ver <b>medicamentos con existencia</b>.</li>\n    <li><b>4)</b> Ver <b>proveedores</b>.</li>\n    <li><b>5)</b> Ver <b>usuarios</b>.</li>\n    <li><b>6)</b> Buscar un <b>medicamento por nombre</b>.</li>\n  </ol>\n\n  <p class=\"hint\">\n    👉 Puedes escribir por ejemplo:\n    <code>1</code>,\n    <code>reporte general</code>,\n    <code>sin stock</code>,\n    <code>existencias</code>,\n    <code>proveedores</code>,\n    <code>usuarios</code>,\n    <code>paracetamol</code>.\n  </p>\n</div>\n",
+    "fecha": "2025-12-01 00:51:17.950879"
+  },
+  {
+    "rol": "usuario",
+    "mensaje": "1",
+    "fecha": "2025-12-01 00:51:20.767738"
+  },
+  {
+    "rol": "bot",
+    "mensaje": "\n            <p>📑 <b>Reporte general generado exitosamente.</b></p>\n            <p>📦 Incluye <b>66</b> medicamentos registrados.</p>\n            <p>\n              <a href=\"static/reportes\\reporte_medicamentos_general_20251201_005122.pdf\" target=\"_blank\" class=\"pdf-btn\">\n                📥 Descargar reporte en PDF\n              </a>\n            </p>\n            ",
+    "fecha": "2025-12-01 00:51:25.504876"
+  },
+  {
+    "rol": "usuario",
+    "mensaje": "5",
+    "fecha": "2025-12-01 00:52:54.674426"
+  },
+  {
+    "rol": "bot",
+    "mensaje": "\n                    <p>👤 <b>Reporte de Usuarios generado correctamente.</b></p>\n                    <p>Se encontraron <b>10</b> usuarios registrados.</p>\n\n                    <table class=\"tabla-datos\">\n                      <thead>\n                        <tr>\n                          <th>ID</th>\n                          <th>Nombre</th>\n                          <th>Email</th>\n                          <th>Rol</th>\n                        </tr>\n                      </thead>\n                      <tbody>\n                        \n                        <tr>\n                          <td>2</td>\n                          <td>ivone</td>\n                          <td>ivone@gmail.com</td>\n                          <td>admin</td>\n                        </tr>\n                        \n                        <tr>\n                          <td>5</td>\n                          <td>Juan Eduardo </td>\n                          <td>jpina7722@gmail.com</td>\n                          <td>admin</td>\n                        </tr>\n                        \n                        <tr>\n                          <td>12</td>\n                          <td>Rafael </td>\n                          <td>al222210691@gmail.com</td>\n                          <td>admin</td>\n                        </tr>\n                        \n                        <tr>\n                          <td>13</td>\n                          <td>Areli </td>\n                          <td>al222210556@gmail.com</td>\n                          <td>admin</td>\n                        </tr>\n                        \n                        <tr>\n                          <td>14</td>\n                          <td>Erick Santiago</td>\n                          <td>al222210795@gmail.com</td>\n                          <td>admin</td>\n                        </tr>\n                        \n                        <tr>\n                          <td>15</td>\n                          <td>Pedro</td>\n                          <td>al222211581@gmail.com</td>\n                          <td>admin</td>\n                        </tr>\n                        \n                        <tr>\n                          <td>16</td>\n                          <td>Luis Angel</td>\n                          <td>al221910569@gmail.com</td>\n                          <td>admin</td>\n                        </tr>\n                        \n                        <tr>\n                          <td>18</td>\n                          <td>Admin</td>\n                          <td>admin@pharmacontrol.com</td>\n                          <td>admin</td>\n                        </tr>\n                        \n                        <tr>\n                          <td>23</td>\n                          <td>JUAN EDUARDO</td>\n                          <td>al222210749@utvtol.edu</td>\n                          <td>usuario</td>\n                        </tr>\n                        \n                        <tr>\n                          <td>25</td>\n                          <td>Chatbot</td>\n                          <td>chatbot-service@pharmacontrol.com</td>\n                          <td>chatbot</td>\n                        </tr>\n                        \n                      </tbody>\n                    </table>\n\n                    <p>\n                      <a href=\"static/reportes\\reporte_usuarios_general_20251201_005258.pdf\" target=\"_blank\" class=\"pdf-btn\">\n                        📥 Descargar reporte en PDF\n                      </a>\n                    </p>\n                    ",
+    "fecha": "2025-12-01 00:53:01.620590"
+  }
+]

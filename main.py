@@ -20,8 +20,9 @@ from email.message import EmailMessage
 import unicodedata
 import string
 
-from utils import generar_reporte          # módulo PDF
+from utils import generar_reporte          # módulo PDF (debe aceptar token=...)
 from services.openai_service import generar_descripcion_ia
+from services.email_service import enviar_correo_reportes
 
 # =======================
 # CONFIGURACIÓN
@@ -29,6 +30,8 @@ from services.openai_service import generar_descripcion_ia
 load_dotenv()
 
 API_BASE_URL = os.getenv("API_BASE_URL", "http://localhost:3000/api")
+# 🔐 Token único de servicio para la IA (cuando no haya token de sesión)
+API_SERVICE_TOKEN = os.getenv("API_SERVICE_TOKEN")
 
 app = FastAPI(title="PharmaControl API", version="3.1")
 
@@ -53,6 +56,9 @@ app.mount("/static", StaticFiles(directory="static"), name="static")
 class ChatRequest(BaseModel):
     mensaje: str
     session_id: str
+    # token de sesión del usuario (opcional);
+    # si viene vacío, usaremos API_SERVICE_TOKEN
+    token: str | None = None
 
 
 # =======================
@@ -187,143 +193,156 @@ def detectar_intencion(texto_original: str) -> str:
 
 
 # =======================
-# CORREO PARA REPORTES
+# SUBIR DOCUMENTO A NESTJS
 # =======================
-def enviar_reportes_por_correo(archivos_pdf: list):
-    """
-    Envía por correo los PDFs generados.
-    'archivos_pdf' debe ser una lista de rutas.
-    """
-    if not archivos_pdf:
-        print("ℹ️ No hay archivos PDF para enviar.")
+def subir_documento_api(
+    ruta_archivo: str,
+    tipo_reporte: str,
+    descripcion: str,
+    token: str | None = None,
+):
+    if not os.path.exists(ruta_archivo):
+        print(f"⚠️ Error: El archivo no existe en la ruta {ruta_archivo}")
         return
 
-    smtp_host = os.getenv("SMTP_HOST")
-    smtp_port = int(os.getenv("SMTP_PORT", "587"))
-    smtp_user = os.getenv("SMTP_USER")
-    smtp_pass = os.getenv("SMTP_PASS")
-    email_to = os.getenv("REPORTS_EMAIL_TO")
+    url_subida = f"{API_BASE_URL}/documentos/subir-ia"
+    nombre_archivo = os.path.basename(ruta_archivo)
 
-    if not (smtp_host and smtp_user and smtp_pass and email_to):
-        print("⚠️ Faltan variables de entorno para envío de correo.")
-        return
+    # SIEMPRE usamos el token de servicio fijo
+    effective_token = API_SERVICE_TOKEN
 
-    msg = EmailMessage()
-    msg["Subject"] = "Reportes automáticos · PharmaControl"
-    msg["From"] = smtp_user
-    msg["To"] = email_to
+    print("🔐 Subiendo a:", url_subida)
+    print("🔐 X-IA-TOKEN =", effective_token)
 
-    cuerpo = [
-        "Hola,",
-        "",
-        "Adjunto encontrarás los reportes generados automáticamente por PharmaControl.",
-        "",
-        f"Total de archivos: {len(archivos_pdf)}",
-        "",
-        "Saludos,",
-        "PharmaControl · IA",
-    ]
-    msg.set_content("\n".join(cuerpo))
-
-    for ruta in archivos_pdf:
-        try:
-            ruta_fs = ruta.lstrip("/")
-            if not os.path.isabs(ruta_fs):
-                ruta_fs = os.path.join(os.getcwd(), ruta_fs)
-
-            if not os.path.exists(ruta_fs):
-                print(f"⚠️ No se encontró el archivo para adjuntar: {ruta_fs}")
-                continue
-
-            with open(ruta_fs, "rb") as f:
-                data = f.read()
-                filename = os.path.basename(ruta_fs)
-
-            msg.add_attachment(
-                data,
-                maintype="application",
-                subtype="pdf",
-                filename=filename,
-            )
-        except Exception as e:
-            print(f"⚠️ Error adjuntando {ruta}: {e}")
+    headers = {}
+    if effective_token:
+        headers["X-IA-TOKEN"] = effective_token
+    else:
+        print("⚠️ No hay API_SERVICE_TOKEN configurado en el .env de la IA.")
 
     try:
-        context = ssl.create_default_context()
-        with smtplib.SMTP(smtp_host, smtp_port) as server:
-            server.starttls(context=context)
-            server.login(smtp_user, smtp_pass)
-            server.send_message(msg)
-        print("✅ Correo de reportes enviado correctamente.")
-    except Exception as e:
-        print(f"❌ Error enviando correo de reportes: {e}")
+        with open(ruta_archivo, 'rb') as f:
+            files = {'file': (nombre_archivo, f, 'application/pdf')}
+            payload = {
+                'tipoReporte': tipo_reporte,
+                'descripcion': descripcion,
+                'generadoPor': 'Asistente IA',
+            }
 
-@app.post("/test-correo")
-async def test_correo():
-    generar_reportes_diarios()
-    return {"ok": True, "mensaje": "Reportes generados y correo enviado."}
+            response = requests.post(
+                url_subida,
+                files=files,
+                data=payload,
+                headers=headers,
+                timeout=15,
+            )
+            print("📡 Status subida IA:", response.status_code, response.text)
+            response.raise_for_status()
+
+        print(f"✅ Documento '{nombre_archivo}' subido exitosamente a la API.")
+    except requests.exceptions.RequestException as e:
+        print(f"❌ Error al subir el documento a la API: {e}")
+
 
 # =======================
 # FUNCIÓN: REPORTES DIARIOS
 # =======================
-from services.email_service import enviar_correo_reportes
-from utils import generar_reporte
-
 def generar_reportes_diarios():
+    """
+    Genera reportes automáticos (medicamentos, sin stock, proveedores, usuarios)
+    y los envía por correo. Usa el token fijo API_SERVICE_TOKEN.
+    """
     print("🕒 Generando reportes automáticos...")
 
-    archivos_generados = []
+    archivos_generados: list[str] = []
 
+    # ---- Medicamentos ----
     try:
-        # Medicamentos
         resp_med = requests.get(f"{API_BASE_URL}/medicamentos/all")
         resp_med.raise_for_status()
         medicamentos = resp_med.json()
 
-        # General
+        # Reporte general
         archivos_generados.append(
-            generar_reporte(medicamentos, "Reporte General de Medicamentos", tipo="medicamentos")
+            generar_reporte(
+                medicamentos,
+                "Reporte General de Medicamentos",
+                tipo_reporte="medicamentos_general",
+                tipo_entidad="medicamentos",
+                token=API_SERVICE_TOKEN,
+            )
         )
 
         # Sin stock
         sin_stock = [m for m in medicamentos if m.get("existencias", 0) == 0]
         if sin_stock:
             archivos_generados.append(
-                generar_reporte(sin_stock, "Medicamentos Sin Existencia", tipo="medicamentos")
+                generar_reporte(
+                    sin_stock,
+                    "Medicamentos sin existencia",
+                    tipo_reporte="medicamentos_sin_stock",
+                    tipo_entidad="medicamentos",
+                    token=API_SERVICE_TOKEN,
+                )
             )
 
-        # Proveedores
-        try:
-            resp_prov = requests.get(f"{API_BASE_URL}/proveedores/all")
-            resp_prov.raise_for_status()
-            proveedores = resp_prov.json()
-            if proveedores:
-                archivos_generados.append(
-                    generar_reporte(proveedores, "Reporte de Proveedores", tipo="proveedores")
-                )
-        except:
-            print("⚠️ No se pudo generar reporte de proveedores")
-
-        # Usuarios
-        try:
-            resp_user = requests.get(f"{API_BASE_URL}/users/all")
-            resp_user.raise_for_status()
-            usuarios = resp_user.json()
-            if usuarios:
-                archivos_generados.append(
-                    generar_reporte(usuarios, "Reporte de Usuarios", tipo="usuarios")
-                )
-        except:
-            print("⚠️ No se pudo generar reporte de usuarios")
-
-        # ---------- Enviar correo ----------
-        enviar_correo_reportes(archivos_generados)
-
-        print("✅ Reportes generados y enviados correctamente.")
-
     except Exception as e:
-        print(f"❌ Error generando reportes automáticos: {e}")
+        print(f"⚠️ No se pudieron generar reportes de medicamentos: {e}")
+        medicamentos = []
 
+    # ---- Proveedores ----
+    try:
+        resp_prov = requests.get(f"{API_BASE_URL}/proveedores/all")
+        resp_prov.raise_for_status()
+        proveedores = resp_prov.json()
+
+        if proveedores:
+            archivos_generados.append(
+                generar_reporte(
+                    proveedores,
+                    "Reporte de Proveedores",
+                    tipo_reporte="proveedores_general",
+                    tipo_entidad="proveedores",
+                    token=API_SERVICE_TOKEN,
+                )
+            )
+    except Exception as e:
+        print(f"⚠️ No se pudo generar reporte de proveedores: {e}")
+
+    # ---- Usuarios ----
+    try:
+        resp_user = requests.get(f"{API_BASE_URL}/users/all")
+        resp_user.raise_for_status()
+        usuarios = resp_user.json()
+
+        if usuarios:
+            archivos_generados.append(
+                generar_reporte(
+                    usuarios,
+                    "Reporte de Usuarios",
+                    tipo_reporte="usuarios_general",
+                    tipo_entidad="usuarios",
+                    token=API_SERVICE_TOKEN,
+                )
+            )
+    except Exception as e:
+        print(f"⚠️ No se pudo generar reporte de usuarios: {e}")
+
+    # ---- Enviar correo ----
+    try:
+        if archivos_generados:
+            enviar_correo_reportes(archivos_generados)
+            print("✅ Reportes generados y enviados correctamente.")
+        else:
+            print("⚠️ No se generó ningún archivo de reporte.")
+    except Exception as e:
+        print(f"❌ Error enviando los reportes por correo: {e}")
+
+
+@app.post("/test-correo")
+async def test_correo():
+    generar_reportes_diarios()
+    return {"ok": True, "mensaje": "Reportes generados y correo enviado."}
 
 
 # =======================
@@ -429,12 +448,14 @@ async def iniciar_nuevo_chat():
 
 
 # =======================
-# CHAT PRINCIPAL (UX SENCILLA)
+# CHAT PRINCIPAL
 # =======================
 @app.post("/chat")
 async def chat(req: ChatRequest):
     global sesiones
 
+    # 🔐 Si no viene token de sesión, usamos el token fijo de la IA
+    token_usuario = req.token or API_SERVICE_TOKEN
     mensaje_usuario = req.mensaje.strip()
     session_id = req.session_id
 
@@ -449,7 +470,7 @@ async def chat(req: ChatRequest):
         }
     )
 
-    # Intento de conexión con la API principal
+    # Intento de conexión con la API principal (por ahora sin auth, solo lectura)
     try:
         resp_med = requests.get(f"{API_BASE_URL}/medicamentos/all")
         resp_med.raise_for_status()
@@ -458,7 +479,7 @@ async def chat(req: ChatRequest):
         respuesta = (
             "❌ <b>No se pudo conectar con la API.</b><br>"
             "Verifica que la URL en tu archivo <code>.env</code> sea correcta y que el servidor de la API esté funcionando.<br>"
-            f"<small style='color:#888'>Detalle técnico: No se pudo resolver el host (DNS). {e}</small>"
+            f"<small style='color:#888'>Detalle técnico: {e}</small>"
         )
         sesiones[session_id].append(
             {"rol": "bot", "mensaje": respuesta, "fecha": str(datetime.datetime.now())}
@@ -497,7 +518,11 @@ async def chat(req: ChatRequest):
                 """
 
             nombre_pdf = generar_reporte(
-                disponibles, "Medicamentos en Existencia", tipo="medicamentos"
+                disponibles,
+                "Medicamentos en Existencia",
+                tipo_reporte="medicamentos_con_stock",
+                tipo_entidad="medicamentos",
+                token=token_usuario,
             )
             total = len(disponibles)
             respuesta = f"""
@@ -544,7 +569,11 @@ async def chat(req: ChatRequest):
                     """
 
                 nombre_pdf = generar_reporte(
-                    sin_stock, "Medicamentos sin existencia", tipo="medicamentos"
+                    sin_stock,
+                    "Medicamentos sin existencia",
+                    tipo_reporte="medicamentos_sin_stock",
+                    tipo_entidad="medicamentos",
+                    token=token_usuario,
                 )
 
                 respuesta = f"""
@@ -575,7 +604,11 @@ async def chat(req: ChatRequest):
         # REPORTE GENERAL
         elif intencion == "reporte_general":
             nombre_pdf = generar_reporte(
-                medicamentos, "Reporte general de medicamentos", tipo="medicamentos"
+                medicamentos,
+                "Reporte general de medicamentos",
+                tipo_reporte="medicamentos_general",
+                tipo_entidad="medicamentos",
+                token=token_usuario,
             )
             total = len(medicamentos)
 
@@ -607,7 +640,11 @@ async def chat(req: ChatRequest):
                     """
 
                 nombre_pdf = generar_reporte(
-                    proveedores, "Reporte de proveedores", tipo="proveedores"
+                    proveedores,
+                    "Reporte de proveedores",
+                    tipo_reporte="proveedores_general",
+                    tipo_entidad="proveedores",
+                    token=token_usuario,
                 )
 
                 respuesta = f"""
@@ -636,7 +673,7 @@ async def chat(req: ChatRequest):
             else:
                 respuesta = "📦 No hay proveedores registrados actualmente."
 
-        # USUARIOS (con UX mejorado cuando falla)
+        # USUARIOS
         elif intencion == "usuarios":
             try:
                 resp_user = requests.get(f"{API_BASE_URL}/users/all")
@@ -646,27 +683,22 @@ async def chat(req: ChatRequest):
                 detalle = str(e)
                 respuesta = f"""
                 <div class="bot-card error-card">
-
                   <p class="title">
                     👤 <b>No pude obtener la lista de usuarios.</b>
                   </p>
-
                   <p class="subtitle">
                     Parece que el módulo de <b>usuarios</b> en tu API presentó un inconveniente.
                   </p>
-
                   <div class="info-block">
                     🔧 <b>Revisa el endpoint:</b><br>
                     <code>/api/users/all</code><br>
                     (Entidad <code>Usuario</code> y su tabla en MySQL).
                   </div>
-
                   <p class="hint">
                     Mientras tanto, puedes seguir consultando
                     <b>medicamentos</b>, <b>proveedores</b> o generar
                     <b>reportes en PDF</b>.
                   </p>
-
                   <small class="tech-detail">
                     🔍 Detalles técnicos: {detalle}
                   </small>
@@ -686,7 +718,11 @@ async def chat(req: ChatRequest):
                         """
 
                     nombre_pdf = generar_reporte(
-                        usuarios, "Reporte de usuarios", tipo="usuarios"
+                        usuarios,
+                        "Reporte de usuarios",
+                        tipo_reporte="usuarios_general",
+                        tipo_entidad="usuarios",
+                        token=token_usuario,
                     )
 
                     respuesta = f"""
@@ -752,7 +788,6 @@ async def chat(req: ChatRequest):
                     f"🧾 <b>Descripción generada por IA:</b><br>{descripcion_ia_html}"
                 )
             else:
-                # No está en la base: card UX bonita, SIN el texto de "regístralo en el módulo..."
                 descripcion_ia = generar_descripcion_ia(mensaje_usuario)
                 descripcion_ia_html = limpiar_markdown(descripcion_ia)
 
@@ -793,7 +828,7 @@ async def chat(req: ChatRequest):
 # =======================
 @app.on_event("startup")
 def iniciar_scheduler():
-    trigger = CronTrigger(hour=7, minute=30)  # ajusta la hora si quieres
+    trigger = CronTrigger(hour=17, minute=30)  # ajusta la hora si quieres
     scheduler.add_job(
         generar_reportes_diarios,
         trigger,

@@ -152,22 +152,29 @@ class PDFReport(FPDF):
 
 def generar_reporte(
     data: List[Dict[str, Any]],
-    titulo: str = "Reporte de Medicamentos",
-    tipo: str = "medicamentos",
+    titulo: str,
+    tipo_reporte: str,
+    tipo_entidad: str = "medicamentos",
     salida_dir: str = "static/reportes",
-    logo_path: str = "static/img/logo.jpg" if os.path.isfile("static/img/logo.jpg") else None
+    logo_path: str = "static/img/logo.jpg" if os.path.isfile("static/img/logo.jpg") else None,
+    token: str | None = None
 
 ) -> str:
     os.makedirs(salida_dir, exist_ok=True)
-    pdf = PDFReport(tipo, logo_path)
+    pdf = PDFReport(tipo_entidad, logo_path)
     pdf.alias_nb_pages()
     pdf.add_page()
     pdf.chapter_title(titulo)
     pdf.chapter_body(data)
 
-    fname = f"reporte_{titulo.replace(' ', '_').lower()}_{datetime.datetime.now():%Y%m%d_%H%M%S}.pdf"
+    fname = f"reporte_{tipo_reporte}_{datetime.datetime.now():%Y%m%d_%H%M%S}.pdf"
     full_path = os.path.join(salida_dir, fname)
     pdf.output(full_path)
+
+    # --- Subir a la API ---
+    from main import subir_documento_api
+    subir_documento_api(ruta_archivo=full_path, tipo_reporte=tipo_reporte, descripcion=titulo, token=token)
+
     return full_path
 
 
